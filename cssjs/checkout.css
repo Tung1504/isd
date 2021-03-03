@@ -1,0 +1,37 @@
+* {
+	font-family: 'Open Sans';
+}
+
+body {
+	width: 1000px;
+	margin: 10px auto;
+}
+
+a {
+	color: #f73131;
+	text-decoration: none;
+}
+
+tr td {
+	padding: 10px;
+}
+
+#checkoutform {
+	float: left;
+	clear: both;
+	width: 500px;
+}
+
+#checkoutform input, select, option, textarea {
+	width: 400px;
+	height: 25px;
+}
+
+#cart {
+	float: right;
+	width: 500px;
+}
+
+#cart table {
+	border: solid;
+}

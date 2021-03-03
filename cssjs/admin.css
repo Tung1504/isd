@@ -1,0 +1,99 @@
+* {
+	font-family: 'Open Sans';
+}
+
+header {
+  height: 50px;
+  padding: 0px 100px;
+  text-align: left;
+}
+
+body {
+	margin: 0 auto;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+.side-menu {
+	float: left;
+	width: 220px;
+	border: 2px solid black;
+	margin-left: 150px;
+	background-color: #000;
+}
+
+.side-menu a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.main {
+	width: 950px;
+	margin-right: 0px;
+	margin-left: 400px;
+}
+
+.main p, .main h2 {
+	margin-left: 20px;
+	text-align: left;
+}
+
+.main tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.main table {
+	border: solid;
+}
+
+td {
+	padding: 10px;
+}
+
+#container {
+	height: auto;
+ 	border: solid 1px black;
+	padding: 50px 0px;
+	background-color: #EEE;
+}
+
+#container form {
+	width: 295px;
+	margin: 15px auto;
+	background-color: #fff;
+}
+
+#butt {
+	background-color: #EEE; 
+	margin-top: 10px; 
+	margin-left: 30%;
+}
+
+.field {
+ 	width: 100%;
+ 	margin: 10px 0px;
+ 	font-size: 20px;
+	text-align: left;
+}
+
+#editdm {
+	height: 225px;
+	border: solid;
+	background-color: #fff;
+}
+
+.error {
+	color: #f00;
+	font-family: Times New Roman;
+	text-align: center;
+}
+
+footer {
+  height: 50px;
+  padding: 0px 100px;
+  font-size: 15px;
+  text-align: left;
+}
