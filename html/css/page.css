@@ -1,0 +1,117 @@
+/* Global Component */
+:root {
+    --primary_color: #1790FF;
+    --blue_1: #58A5FF;
+    --gray_1: #AAAAAA;
+    --gray_2: #828282;
+    --gray_3: #F5F5F5;
+    --black: #000000;
+    --black_2: #363636;
+    --white_1: #FFFFFF;
+}
+body {
+    background-color: var(--gray_3) !important;
+}
+.main-page {
+    margin: auto
+}
+.input-form {
+    height: 50px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid var(--gray_2);
+    margin-top: 30px;
+}
+.input-form::placeholder {
+    color: var(--gray_1);
+    font-weight: 600;
+}
+.input-form:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--gray_2);
+}
+.title {
+    text-align: center;
+}
+
+/* Sign In */
+.sign-in-index, .switch-tab {
+    display: flex;
+    flex-direction: row;
+}
+
+.switch-tab-active, .switch-tab-inactive  { 
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    font-weight: 700;
+}
+.switch-tab-active {
+    color: var(--primary_color);
+    border-bottom: 2px solid var(--primary_color);
+}
+.switch-tab-inactive {
+    color: var(--black_2r);
+    border-bottom: 1px solid var(--black_2);
+}
+.left-side {
+    background-color:var(--white_1);
+}
+.sign-in-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.checkbox-section {
+    width: 80%;
+    margin-top: 30px;
+    height: 25px;
+    line-height: 25px
+}
+.checkbox-section input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+.checkbox-section span {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-top: -15px;
+}
+.btn-submit {
+    margin-top: 30px;
+    width: 80%;
+    border: 1px solid var(--primary_color);
+    border-radius: 5px;
+    background-color:var(--white_1);
+    vertical-align: middle;
+}
+.btn-submit p{
+    padding: 10px ;
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 600;
+}
+.extra-information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extra-information p {
+    width: 80%;
+}
+.social-sign-in {
+    background-color: var(--primary_color);
+    height: 50px;
+}
+.right-side {
+    background-color: var(--black_2);
+}
