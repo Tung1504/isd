@@ -13,7 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/cssjs/script.js"></script>
 </head>
 
 <body>
@@ -30,25 +31,29 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/images/carousel2.jpg " class="d-block w-100" alt="/img/carousel1.jpg" height="500px"
-                    width="auto">
-                <div class="carousel-caption">
-                    <h1 class="display-2">Bookworm</h1>
-                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id voluptatum, possimus optio modi
-                        dolore incidunt corrupti voluptatem sed culpa, fuga perspiciatis corporis sunt laborum assumenda
-                        explicabo fugit molestias quasi nobis.</h3>
-                    <button type="button" class="btn btn-outline-light btn-lg">
-                        Shop now
-                    </button>
-                    <button type="button" class="btn btn-primary btn-lg">Contact us</button>
+                <div class="hero-banner">
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Bookworm</h1>
+                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id voluptatum, possimus optio modi
+                            dolore incidunt corrupti voluptatem sed culpa, fuga perspiciatis corporis sunt laborum assumenda
+                            explicabo fugit molestias quasi nobis.</h3>
+                        <div class="bnt-content">
+                            <button type="button" class="btn btn-outline-light btn-lg">
+                                Shop now
+                            </button>
+                            <button type="button" class="btn btn-primary btn-lg">Contact us</button>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
             <div class="carousel-item">
-                <img src="/images/carousel2.jpg" class="d-block w-100" alt="/img/carousel1.jpg" height="500px"
+                <img src="imgs/carousel2.jpg" class="d-block w-100" alt="/img/carousel1.jpg" height="500px"
                     width="auto">
             </div>
             <div class="carousel-item">
-                <img src="/images/carousel2.jpg" class="d-block w-100" alt="/img/carousel1.jpg" height="500px"
+                <img src="imgs/carousel3.jpg" class="d-block w-100" alt="/img/carousel1.jpg" height="500px"
                     width="auto">
             </div>
         </div>
@@ -66,11 +71,12 @@
     <!-- jumbotron -->
     <div class="container padding">
         <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4">Sale off!!</h1>
-            </div>
+           <div class="header-content">
+               <div class="header-text">
+                    <h1>Sale off</h1>
+               </div>
+           </div>
             <!-- Horizontal Rule -->
-            <hr>
             <div class="col-12">
                 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -86,33 +92,18 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 12rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card" >
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 12rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                 </div>
@@ -123,33 +114,18 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                 </div>
@@ -160,33 +136,18 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card" >
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card">
+
                                         </div>
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
+                                        <div class="card" >
+
                                         </div>
                                     </div>
                                 </div>
@@ -210,16 +171,17 @@
     </div>
     <div class="container padding">
         <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4">Feature</h1>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Feature</h1>
+                </div>
             </div>
             <!-- Horizontal Rule -->
-            <hr>
             <div class="col-12">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -228,8 +190,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -238,8 +200,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -248,8 +210,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -260,8 +222,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -270,8 +232,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -280,8 +242,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -290,8 +252,8 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card" style="width: 12rem;">
-                            <img src="/images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card" >
+                            <img src="imgs/3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text"></p>
@@ -304,24 +266,26 @@
         </div>
     </div>
 
-    <div class="container-fluid padding">
+    <div>
         <div class="jumbotron">
-            <div class="row">
-                <div class="col-sm">24h SERVICE </div>
-                <div class="col-sm">FREE RETURN</div>
-                <div class="col-sm">ORDER TRACKING</div>
-                <div class="col-sm">FAST DELIVERY</div>
+            <div class="container">
+                <div class="jumbotron-content">
+                    <div class="col-sm">24h SERVICE </div>
+                    <div class="col-sm">FREE RETURN</div>
+                    <div class="col-sm">ORDER TRACKING</div>
+                    <div class="col-sm">FAST DELIVERY</div>
+                </div>
             </div>
         </div>
     </div>
-    <hr class="my-2">
     <div class="container padding">
         <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4">Recommend</h1>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Recommend</h1>
+                </div>
             </div>
             <!-- Horizontal Rule -->
-            <hr>
             <div class="col-12">
                 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -337,34 +301,13 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 12rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 12rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -374,35 +317,13 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
 
@@ -411,34 +332,13 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="./images/1.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem; height: 20rem">
-                                            <img src="./images/2.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="col-sm">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="/images/3.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text"></p>
-                                                <a href="#" class="btn btn-outline">Add to cart</a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
