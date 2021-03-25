@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sản Phẩm</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="product-addmin">
+    <div class="side-menu"></div>
+    <div class="content">
+        <div class="control">
+            <div class="control-content">
+                <button href="#">Quay Lại</button>
+                <button>Lưu và tạo mới</button>
+                <button>Chỉnh sửa sản phẩm</button>
+                <button>Xóa</button>
+                <button class="add-product" type="submit">Lưu sản phẩm</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header-content">
+                <h1>Thêm sản phẩm mới</h1>
+            </div>
+            <hr>
+            <div class="manage-product">
+                <section>
+                    <p>Tên sản phẩm</p>
+                    <input type="text" name="product-name" required>
+                </section>
+                <section>
+                    <p>SKU</p>
+                    <input type="text" name="product-sku" required>
+                </section>
+                <section>
+                    <p>Tác giả</p>
+                    <input type="text" name="product-author" required>
+                </section>
+                <section>
+                    <p>Hình ảnh</p>
+                    <input type="file" name="product-image" required>
+                </section>
+                <section>
+                    <p>Giá thành</p>
+                    <input type="number" name="product-price" required>
+                </section>
+                <section>
+                    <p>Category</p>
+                    <select name="product-category" required>
+                        <option>Trinh thám</option>
+                        <option>Kinh Dị</option>
+                        <option>Văn học nước ngoài</option>
+                        <option>Văn học Việt Nam</option>
+                        <option>Giáo trình</option>
+                    </select>
+                </section>
+                <section>
+                    <p>Mô tả</p>
+                    <textarea name="product-short-description" required></textarea>
+                </section>
+                <section>
+                    <p>Chi tiết sản phẩm</p>
+                    <textarea name="product-detail"></textarea>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

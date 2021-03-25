@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.product-addmin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.side-menu {
+    width: 10%;
+    background-color: #333;
+    height: 900px;
+    margin-right: 30px;
+}
+.content {
+    width: 80%;
+    height: 900px;
+    position: relative;
+}
+.control {
+    overflow: hidden;
+    background-color: #F5F5F5;
+    position: fixed;
+    top: 0;
+    width: 87%;
+    padding: 15px;
+    right: 0;
+}
+.control-content{
+    display: flex;
+    justify-content: flex-end;
+}
+.control button, .control .add-product {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    border: none;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.control button:focus{
+    outline: none;
+}
+.control button {
+    color: #333;
+
+}
+.control .add-product {
+    color: #FFF;
+    background-color: #80A751;
+}
+.main-content {
+    margin-top: 90px;
+}
+section{
+    margin-top: 30px;
+}
+section p {
+    margin-bottom: 5px
+}
+section p::after {
+    content: '*';
+}
+section input, section select {
+    width: 60%;
+    height: 35px
+}
+section textarea{
+    width: 60%;
+    height: 60px;
+}
