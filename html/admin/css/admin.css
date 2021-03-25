@@ -58,6 +58,7 @@ body{
 }
 .main-content {
     margin-top: 90px;
+    padding: 10px 30px 10px 0px
 }
 section{
     margin-top: 30px;
@@ -72,7 +73,40 @@ section input, section select {
     width: 60%;
     height: 35px
 }
+section input[type='number']{
+    width: 30%;
+}
 section textarea{
     width: 60%;
     height: 60px;
+}
+.category-not-have-product{
+    font-size: 16px;
+    font-weight: 600;
+}
+.text-infor {
+    font-weight: 300;
+    font-style: italic;
+}
+.category-have-product{
+    font-size: 16px;
+    font-weight: 600;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+td {
+    font-weight: 400;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
 }

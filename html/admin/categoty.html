@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="product-addmin">
+    <div class="side-menu"></div>
+    <div class="content">
+        <div class="control">
+            <div class="control-content">
+                <button href="#">Quay Lại</button>
+                <button>Lưu và tạo mới</button>
+                <button>Chỉnh sửa</button>
+                <button>Xóa</button>
+                <button class="add-product" type="submit">Lưu</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header-content">
+                <h1>Category</h1>
+            </div>
+            <hr>
+            <div class="manage-product">
+                <section>
+                    <p>Category</p>
+                    <input type="text" name="product-category" required>
+                </section>
+                <div class="category-not-have-product">
+                    <p>Sản phẩm thuộc category</p>
+                    <hr>
+                    <p class="text-infor">Chưa có sản phẩm </p>
+                </div>
+                <div class="category-have-product">
+                    <p>Sản phẩm thuộc category</p>
+                    <hr>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>SKU</th>
+                            <th>Số lượng</th>
+                            <th>Giá thành</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tên sản phẩm 1</td>
+                            <td>SKU 1</td>
+                            <td>Số lượng 1</td>
+                            <td>100.000 VND</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
