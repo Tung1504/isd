@@ -58,7 +58,10 @@ body{
 }
 .control button {
     color: #333;
-
+}
+.control button  a{
+    color: #333;
+    text-decoration: none;
 }
 .control .add-product {
     color: #FFF;
@@ -118,4 +121,114 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+/*Side Bar*/
+.logo {
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #fff
+}
+.nav-items {
+
+}
+.nav-items ul {
+    padding: 0
+}
+.nav-items li {
+    list-style: none;
+    padding: 0px
+}
+.nav-items li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 30px 20px;
+    display: block;
+}
+.nav-items li:hover {
+    background-color: #5E6977;
+}
+/*Table */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+table td img {
+    width: 50px;
+    height: 50px;
+}
+table td li{
+    list-style: none;
+}
+table td li a {
+    text-decoration: none;
+}
+/*HEading*/
+.control-form {
+    display: flex;
+    width: 100%;
+}
+.control-form input[type="text"]{
+    width: 460px;
+    height: 40px;
+    border: 1px solid #828282;
+    padding: 0 20px;
+}
+.control-form input[type="text"]:focus, .sb-icon-search:focus, .control-form select:focus{
+    outline: none;
+}
+.control-form .search-form {
+    position: relative;
+    margin-right: 30px;
+}
+.sb-icon-search {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFFFff;
+    border: 1px solid #828282;
+}
+.control-form select{
+    width: 220px
+}
+.total-product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.select-number-per-page {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    line-height: 50px;
+}
+.select-number-per-page select{
+    height: 40px;
+    width: 60px;
+    margin-right: 10px;
+}
+.select-number-per-page p{
+    margin: 0;
+}
+.select-number-per-page select:focus{
+    outline: none;
+}
+.pagination-button button {
+    height: 40px;
+    width: 60px;
+
 }
