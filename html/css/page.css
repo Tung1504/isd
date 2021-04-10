@@ -11,10 +11,11 @@
     --black_2: #363636;
     --white_1: #FFFFFF;
 }
-
-body{
+*{
     margin: 0;
     padding: 0;
+}
+body{
     font-family: 'Montserrat', sans-serif !important;
     background-color: var(--gray_3) !important;
 }
@@ -106,7 +107,7 @@ body{
 }
 .top-header .signin-container .user-avatar{
     margin-right: 5px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .top-header .signin-container .first-element a::after{
     content: '';
@@ -441,4 +442,8 @@ input.mtext-104:focus{
 }
 .action:hover i {
     color: var(--white_1) !important;
+}
+.text {
+    color: var(--white_1);
+    margin-left: 5px;
 }
