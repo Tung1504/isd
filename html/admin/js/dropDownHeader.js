@@ -15,6 +15,20 @@ window.onclick = function(event) {
         }
     }
 }
+let specialPrice = document.getElementById('specialPrice');
+function openSpecialPrice() {
+    specialPrice.classList.add('active');
+}
+function close(){
+    let dropdowns = document.getElementsByClassName("special-price");
+    let i;
+        for (i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('active')) {
+                openDropdown.classList.remove('active');
+            }
+        }
+}
 
 window.onscroll = function() {scrollControl()};
 

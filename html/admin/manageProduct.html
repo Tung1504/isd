@@ -43,8 +43,8 @@
             <ul>
                 <li><a href="manageCategory.html">Danh Mục</a></li>
                 <li><a href="manageProduct.html">Sản Phẩm</a> </li>
-                <li><a href="">Khách hàng</a> </li>
-                <li><a href="">Đơn hàng</a> </li>
+                <li><a href="manageCustomer.html">Khách hàng</a> </li>
+                <li><a href="manageCheckout.html">Đơn hàng</a> </li>
                 <li><a href="">Widget</a> </li>
             </ul>
         </div>
@@ -57,24 +57,27 @@
         </div>
         <div class="main-content">
             <div class="header-content">
-                <h1>Danh mục Sản Phẩm</h1>
+                <h5>Danh mục Sản Phẩm</h5>
+                <div class="total-product">
+                    <h6>1000 <span>Sản phẩm</span> </h6>
+                </div>
             </div>
             <hr>
             <div class="control-form">
-                <form class="search-form">
-                    <input type="text" value="" placeholder="Tìm kiếm sản phẩm">
-                    <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-                </form>
-                <select>
-                    <option>Trinh thám</option>
-                    <option>Kinh Dị</option>
-                    <option>Văn học nước ngoài</option>
-                    <option>Văn học Việt Nam</option>
-                    <option>Giáo trình</option>
-                </select>
-            </div>
-            <div class="total-product">
-                <h3>1000 <span>Sản phẩm</span> </h3>
+                <div class="displayFlex">
+                    <form class="search-form">
+                        <input type="text" value="" placeholder="Tìm kiếm sản phẩm">
+                        <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
+                    </form>
+                    <select>
+                        <option>Trinh thám</option>
+                        <option>Kinh Dị</option>
+                        <option>Văn học nước ngoài</option>
+                        <option>Văn học Việt Nam</option>
+                        <option>Giáo trình</option>
+                    </select>
+                </div>
+
                 <div class="pagination">
                     <div class="select-number-per-page">
                         <select>
@@ -115,71 +118,10 @@
                     <td>Giá thành</td>
                     <td>Còn hàng</td>
                     <td>
-                        <li><a href="#">Xóa</a> </li>
-                        <li><a href="#">Chỉnh sửa</a> </li>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <img src="../imgs/1.jpg">
-                    </td>
-                    <td>Tên sách</td>
-                    <td>TH-01-12</td>
-                    <td>Số lượng</td>
-                    <td>Giá thành</td>
-                    <td>Hết hàng</td>
-                    <td>
-                        <li><a href="#">Xóa</a> </li>
-                        <li><a href="#">Chỉnh sửa</a> </li>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <img src="../imgs/1.jpg">
-                    </td>
-                    <td>Tên sách</td>
-                    <td>TH-01-12</td>
-                    <td>Số lượng</td>
-                    <td>Giá thành</td>
-                    <td>Hết hàng</td>
-                    <td>
-                        <li><a href="#">Xóa</a> </li>
-                        <li><a href="#">Chỉnh sửa</a> </li>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <img src="../imgs/1.jpg">
-                    </td>
-                    <td>Tên sách</td>
-                    <td>TH-01-12</td>
-                    <td>Số lượng</td>
-                    <td>Giá thành</td>
-                    <td>Hết hàng</td>
-                    <td>
-                        <li><a href="#">Xóa</a> </li>
-                        <li><a href="#">Chỉnh sửa</a> </li>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>5</td>
-                    <td>
-                        <img src="../imgs/1.jpg">
-                    </td>
-                    <td>Tên sách</td>
-                    <td>TH-01-12</td>
-                    <td>Số lượng</td>
-                    <td>Giá thành</td>
-                    <td>Hết hàng</td>
-                    <td>
-                        <li><a href="#">Xóa</a> </li>
-                        <li><a href="#">Chỉnh sửa</a> </li>
+                        <ul class="table-action">
+                            <li><a href="#"><i class="fas fa-trash"></i></a> </li>
+                            <li><a href="#"><i class="far fa-edit"></i></a> </li>
+                        </ul>
                     </td>
                 </tr>
 
@@ -187,7 +129,6 @@
         </div>
     </div>
 </div>
-<footer>
     <div class="copyright">
         <div class="copy-left">
             <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
@@ -196,7 +137,6 @@
             <p>Designed by HTNLQ.</p>
         </div>
     </div>
-</footer>
 </body>
 <script src="js/dropDownHeader.js"></script>
 </html>

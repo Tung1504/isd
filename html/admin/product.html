@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Category</title>
+    <title>Thêm mới sản phẩm</title>
     <link rel="stylesheet" type="text/css" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,8 +43,8 @@
             <ul>
                 <li><a href="manageCategory.html">Danh Mục</a></li>
                 <li><a href="manageProduct.html">Sản Phẩm</a> </li>
-                <li><a href="">Khách hàng</a> </li>
-                <li><a href="">Đơn hàng</a> </li>
+                <li><a href="manageCustomer.html">Khách hàng</a> </li>
+                <li><a href="manageCheckout.html">Đơn hàng</a> </li>
                 <li><a href="">Widget</a> </li>
             </ul>
         </div>
@@ -65,40 +65,67 @@
             </div>
             <hr>
             <div class="manage-product">
-                <section>
-                    <p>Tên sản phẩm</p>
-                    <input type="text" name="product-name" required>
-                </section>
-                <section>
-                    <p>Category</p>
-                    <select name="product-category" required>
-                        <option>Trinh thám</option>
-                        <option>Kinh Dị</option>
-                        <option>Văn học nước ngoài</option>
-                        <option>Văn học Việt Nam</option>
-                        <option>Giáo trình</option>
-                    </select>
-                </section>
-                <section>
-                    <p>SKU</p>
-                    <input type="text" name="product-sku" required>
-                </section>
-                <section>
-                    <p>Tác giả</p>
-                    <input type="text" name="product-author" required>
-                </section>
-                <section>
-                    <p>Hình ảnh</p>
-                    <input type="file" name="product-image" required>
-                </section>
-                <section>
-                    <p>Giá thành</p>
-                    <input type="number" name="product-price" required>
-                </section>
-                <section>
-                    <p>Số lượng</p>
-                    <input type="number" name="product-qty" required>
-                </section>
+                <div class=" displayFlex">
+                    <div class="product-left col-sm-5">
+                        <section>
+                            <p>Tên sản phẩm</p>
+                            <input type="text" name="product-name" required>
+                        </section>
+                        <section>
+                            <p>Category</p>
+                            <select name="product-category" required>
+                                <option>Trinh thám</option>
+                                <option>Kinh Dị</option>
+                                <option>Văn học nước ngoài</option>
+                                <option>Văn học Việt Nam</option>
+                                <option>Giáo trình</option>
+                            </select>
+                        </section>
+                        <section>
+                            <p>SKU</p>
+                            <input type="text" name="product-sku" required>
+                        </section>
+                        <section>
+                            <p>Tác giả</p>
+                            <input type="text" name="product-author" required>
+                        </section>
+                    </div>
+                    <div class="product-right col-sm-5">
+                        <section>
+                            <p>Hình ảnh</p>
+                            <input type="file" name="product-image" required>
+                        </section>
+                        <section>
+                            <p>Số lượng</p>
+                            <input type="number" name="product-qty" required>
+                        </section>
+
+                        <section class="price">
+                            <div class="price-content">
+                                <p>Giá thành</p>
+                                <input type="number" name="product-price" required>
+                            </div>
+                            <div  class="btnSpecialPrice">
+                                <a href="#" onclick="openSpecialPrice()"> Special Price</a></div>
+                            <div id="specialPrice" class="special-price">
+                                <div class="light-box">
+                                    <button class="close">
+                                        <a onclick="close()" href=""><i class="fas fa-times"></i></a></button>
+                                    <div class="header-content">
+                                        <h5>Giá đặc biệt</h5>
+                                    </div>
+                                    <hr>
+                                    <p>Giá thành</p>
+                                    <p class="note">Giá thành sản phẩm được giảm giá</p>
+                                    <input type="number" name="special-price">
+                                    <button class="save" type="submit">
+                                        <a onclick="close()" href="">Lưu</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
                 <section>
                     <p>Mô tả</p>
                     <textarea name="product-short-description" required></textarea>
@@ -107,11 +134,12 @@
                     <p>Chi tiết sản phẩm</p>
                     <textarea name="product-detail"></textarea>
                 </section>
+
+
             </div>
         </div>
     </div>
 </div>
-<footer>
     <div class="copyright">
         <div class="copy-left">
             <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
@@ -120,7 +148,6 @@
             <p>Designed by HTNLQ.</p>
         </div>
     </div>
-</footer>
 </body>
 <script src="js/dropDownHeader.js"></script>
 </html>

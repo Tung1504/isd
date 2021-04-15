@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Danh mục</title>
+    <title>Quản lý khách hàng</title>
     <link rel="stylesheet" type="text/css" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -50,24 +50,27 @@
         </div>
     </div>
     <div class="content">
-        <div class="control">
-            <div class="control-content"  id="control-bar">
-                <button class="add-product"><a href="addCategory.html">Tạo mới danh mục</a></button>
-            </div>
-        </div>
+<!--        <div class="control">-->
+<!--            <div class="control-content"  id="control-bar">-->
+<!--                <button class="add-product"><a href="product.html">Tạo mới sản phẩm</a></button>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="main-content">
             <div class="header-content">
-                <h5>Quản lý danh mục</h5>
+                <h5>Khách Hàng</h5>
                 <div class="total-product">
-                    <h6>100<span> Danh mục</span> </h6>
+                    <h6>1000 <span>Khách Hàng</span> </h6>
                 </div>
             </div>
             <hr>
             <div class="control-form">
-                <form class="search-form">
-                    <input type="text" value="" placeholder="Tìm kiếm danh mục">
-                    <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-                </form>
+                <div class="displayFlex">
+                    <form class="search-form">
+                        <input type="text" value="" placeholder="Tìm kiếm khách hàng">
+                        <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
+                    </form>
+                </div>
+
                 <div class="pagination">
                     <div class="select-number-per-page">
                         <select>
@@ -86,29 +89,23 @@
 
                 </div>
             </div>
-
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Tên danh mục</th>
-                    <th>Label</th>
+                    <th>STT</th>
+                    <th>Tên người dùng</th>
+                    <th>Tên đầy đủ</th>
+                    <th>Email</th>
+                    <th>Số điện thoại </th>
+                    <th>Địa chỉ thanh toán</th>
                     <th></th>
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Trinh thám</td>
-                    <td>TH</td>
-                    <td>
-                        <ul class="table-action">
-                            <li><a href="#"><i class="fas fa-trash"></i></a> </li>
-                            <li><a href="#"><i class="far fa-edit"></i></a> </li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Trinh thám</td>
-                    <td>TH</td>
+                    <td>PhamHoa2410</td>
+                    <td>Phạm Bích Hòa</td>
+                    <td>bichhoa2410_1111@gmail.com</td>
+                    <td>0936542030</td>
+                    <td>Khu đô thị Đại Thanh - Tả Thanh Oai - Thanh Trì - Hà Nội</td>
                     <td>
                         <ul class="table-action">
                             <li><a href="#"><i class="fas fa-trash"></i></a> </li>
@@ -120,14 +117,14 @@
         </div>
     </div>
 </div>
-    <div class="copyright">
-        <div class="copy-left">
-            <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
-        </div>
-        <div class="copy-right">
-            <p>Designed by HTNLQ.</p>
-        </div>
+<div class="copyright">
+    <div class="copy-left">
+        <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
     </div>
+    <div class="copy-right">
+        <p>Designed by HTNLQ.</p>
+    </div>
+</div>
 </body>
 <script src="js/dropDownHeader.js"></script>
 </html>
