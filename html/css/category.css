@@ -1,6 +1,6 @@
 
 body{
-    background: #f5f5f5;
+    background: var(--white_1);
 }
 .shop-content{
     margin: 40px 0;
@@ -48,11 +48,13 @@ h4{
     flex-wrap: wrap;
 }
 .product-photo{
-    width: 256px;
+    width: 255px;
     margin-right: 28px;
     border: 1px solid var(--primary_color);
     border-radius: 5px;
     margin-bottom: 30px;
+    /*background-color: var(--white_1);*/
+    box-shadow: 1px 1px 4px rgba(0,0,0,.3);
 }
 .product-name h6 {
     font-weight: 600;
@@ -73,7 +75,9 @@ h4{
     color: var(--primary_color);
 }
 .pro-img {
-    width: 100%;
+    width: 70%;
+    /* text-align: center; */
+    margin: auto;
 }
 .pro-img img {
     width: 100%;
@@ -155,6 +159,9 @@ h4{
 .pagination li a:active{
     background: var(--primary_color);
     color: var(--white_1);
+}
+.rating span{
+    font-size: 12px;
 }
 /*Breadcrum*/
 .breadcrum ul {

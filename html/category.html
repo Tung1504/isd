@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, innitial-scale=1">
     <script type="text/javascript" src="js/1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/page.css">
     <link rel="stylesheet" type="text/css" href="css/category.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<!--Ranger Price-->
+    <link href="../node_modules/nouislider/distribute/nouislider.css" rel="stylesheet">
+    <script src="../node_modules/nouislider/distribute/nouislider.js"></script>
+
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
@@ -164,7 +169,15 @@
                             </div>
                             <div class="filter-section">
                                 <h5 class="heading-style">Khoảng giá</h5>
-
+                                <div class="mall-property">
+                                    <div class="mall-slider-handles"
+                                         data-start="0"
+                                         data-end="1000000"
+                                         data-min="0"
+                                         data-max="1000000" data-target="price" style="width: 100%"></div>
+                                    <input data-min="price" name="price-min" value="0">
+                                    <input data-max="price" name="price-max" value="1000000">
+                                </div>
                             </div>
                         </div>
                         <div class="shop-right col-sm-9">
@@ -201,7 +214,7 @@
                                     <div class="info-title">
                                         <div class="pro-info">
                                             <div class="rating">
-                                                <img src="imgs/star.png" alt="">
+                                               <span>Đánh giá: <span>8/10</span></span>
                                             </div>
                                         </div>
                                         <div class="price">
@@ -235,7 +248,7 @@
                                     <div class="info-title">
                                         <div class="pro-info">
                                             <div class="rating">
-                                                <img src="imgs/star.png" alt="">
+                                                <span>Đánh giá: <span>8/10</span></span>
                                             </div>
                                         </div>
                                         <div class="price">
@@ -269,7 +282,7 @@
                                     <div class="info-title">
                                         <div class="pro-info">
                                             <div class="rating">
-                                                <img src="imgs/star.png" alt="">
+                                                <span>Đánh giá: <span>8/10</span></span>
                                             </div>
                                         </div>
                                         <div class="price">
@@ -303,7 +316,7 @@
                                     <div class="info-title">
                                         <div class="pro-info">
                                             <div class="rating">
-                                                <img src="imgs/star.png" alt="">
+                                                <span>Đánh giá: <span>8/10</span></span>
                                             </div>
                                         </div>
                                         <div class="price">
@@ -337,7 +350,75 @@
                                     <div class="info-title">
                                         <div class="pro-info">
                                             <div class="rating">
-                                                <img src="imgs/star.png" alt="">
+                                                <span>Đánh giá: <span>8/10</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <p>Giá thành: <span>100.000</span> VND</p>
+                                        </div>
+                                        <div class="action-product">
+                                            <div class="add-cart">
+                                                <button>
+                                                    <p>Thêm vào giỏ hàng</p>
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="add-wishlist">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-photo">
+                                    <div class="info-title">
+                                        <div class="product-name">
+                                            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                        </div>
+                                        <div class="product-author">
+                                            <p>Tên tác giả</p>
+                                        </div>
+                                    </div>
+                                    <div class="pro-img">
+                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info-title">
+                                        <div class="pro-info">
+                                            <div class="rating">
+                                                <span>Đánh giá: <span>8/10</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <p>Giá thành: <span>100.000</span> VND</p>
+                                        </div>
+                                        <div class="action-product">
+                                            <div class="add-cart">
+                                                <button>
+                                                    <p>Thêm vào giỏ hàng</p>
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="add-wishlist">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-photo">
+                                    <div class="info-title">
+                                        <div class="product-name">
+                                            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                        </div>
+                                        <div class="product-author">
+                                            <p>Tên tác giả</p>
+                                        </div>
+                                    </div>
+                                    <div class="pro-img">
+                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info-title">
+                                        <div class="pro-info">
+                                            <div class="rating">
+                                                <span>Đánh giá: <span>8/10</span></span>
                                             </div>
                                         </div>
                                         <div class="price">
@@ -381,5 +462,25 @@
 </body>
 <script src="js/dropDownHeader.js"></script>
 <script src="js/numberControl.js"></script>
-
+<script>
+    $(function () {
+        let $propertiesForm = $('.mall-category-filter');
+        $('.mall-slider-handles').each(function () {
+            let el = this;
+            noUiSlider.create(el, {
+                start: [el.dataset.start, el.dataset.end],
+                connect: true,
+                tooltips: false,
+                range: {
+                    min: [parseFloat(el.dataset.min)],
+                    max: [parseFloat(el.dataset.max)]
+                },
+            }).on('change', function (values) {
+                $('[data-min="' + el.dataset.target + '"]').val(values[0])
+                $('[data-max="' + el.dataset.target + '"]').val(values[1])
+                $propertiesForm.trigger('submit');
+            });
+        })
+    })
+</script>
 </html>
