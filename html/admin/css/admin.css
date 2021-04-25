@@ -580,3 +580,16 @@ form fieldset input{
     margin: 0;
     list-style: none;
 }
+.order-infor select{
+    width: 70%;
+    height: 40px;
+}
+.order-infor select:focus{
+    outline: none;
+}
+.btn-submit {
+    color: #FFF;
+    background-color: #5f9ea0;
+    padding: 10px 40px;
+    border: none;
+}

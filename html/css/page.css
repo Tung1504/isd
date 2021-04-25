@@ -285,7 +285,22 @@ input::-webkit-inner-spin-button {
     align-items: center;
     padding: 15px 0px;
 }
-
+.sign-in-facebook{
+    background-color: #3B5998;
+    color: white;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+.sign-in-google{
+    background-color: #dd4b39;
+    color: white;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
 .checkbox-section {
     width: 80%;
     margin-top: 30px;
@@ -333,6 +348,12 @@ input::-webkit-inner-spin-button {
     width:100%;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+}
+.social-sign-in .text {
+    color: var(--white_1);
 }
 .right-side {
     background-color: var(--black_2);
@@ -453,4 +474,22 @@ input.mtext-104:focus{
 .text {
     color: var(--white_1);
     margin-left: 5px;
+}
+@media screen and (max-width: 1023px ) {
+    .left-side {
+        width: 100% !important;
+    }
+    .right-side {
+        display: none;
+    }
+    .switch-tab-active, .switch-tab-inactive {
+        width: 50%;
+    }
+    .social-sign-in{
+        position: relative;
+        text-align: center;
+        display: block;
+        height: 170px;
+    }
+
 }
