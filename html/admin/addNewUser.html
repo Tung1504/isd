@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quản lý khách hàng</title>
+    <title>Tạo mới người dùng</title>
     <link rel="stylesheet" type="text/css" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,14 +31,15 @@
             <div class="drop-down">
                 <a href="#" onclick="dropDownHeader()" class="dropAdminBtn"></a>
                 <div id="dropAdmin" class="dropdownContent">
-                    <a href="#">Log Out</a>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="addNewUser.html">Tạo mới người dùng</a></li>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="product-addmin">
-    <div class="side-menu">
+    <div class="side-menu" style="height: 82vh">
         <div class="nav-items">
             <ul>
                 <li><a href="Dashboard.html">Trang chủ</a></li>
@@ -51,70 +52,43 @@
         </div>
     </div>
     <div class="content">
-<!--        <div class="control">-->
-<!--            <div class="control-content"  id="control-bar">-->
-<!--                <button class="add-product"><a href="product.html">Tạo mới sản phẩm</a></button>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div class="control">
+            <div class="control-content"  id="control-bar">
+                <button><a href="Dashboard.html">Quay Lại Trang chủ</a> </button>
+                <button>Lưu và tạo mới</button>
+                <button>Xóa</button>
+                <button class="add-product" type="submit">Lưu</button>
+            </div>
+        </div>
         <div class="main-content">
             <div class="header-content">
-                <h5>Khách Hàng</h5>
-                <div class="total-product">
-                    <h6>1000 <span>Khách Hàng</span> </h6>
-                </div>
+                <h5>Tạo mới người dùng</h5>
             </div>
             <hr>
-            <div class="control-form">
-                <div class="displayFlex">
-                    <form class="search-form">
-                        <input type="text" value="" placeholder="Tìm kiếm khách hàng">
-                        <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-                    </form>
-                </div>
-
-                <div class="pagination">
-                    <div class="select-number-per-page">
-                        <select>
-                            <option>20</option>
-                            <option>30</option>
-                            <option>50</option>
-                            <option>100</option>
-                            <option>200</option>
-                        </select>
-                        <p>trong 1 trang</p>
+            <div class="manage-product">
+                <div class=" displayFlex">
+                    <div class="product-left col-sm-5">
+                        <section>
+                            <p>Họ và tên</p>
+                            <input type="text" name="user-name" required>
+                        </section>
+                        <section>
+                            <p>Email</p>
+                            <input type="text" name="user-email" required>
+                        </section>
                     </div>
-                    <div class="pagination-button">
-                        <button><img src="../imgs/icon/black/back.svg"></button>
-                        <button><img src="../imgs/icon/black/next.svg"></button>
+                    <div class="product-right col-sm-5">
+                        <section >
+                            <p>Password</p>
+                            <input type="text" name="user-password" required>
+                        </section>
+                        <section >
+                            <p>Re-password</p>
+                            <input type="text" name="user-repassword" required>
+                        </section>
                     </div>
-
                 </div>
             </div>
-            <table>
-                <tr>
-                    <th>STT</th>
-                    <th>Tên người dùng</th>
-                    <th>Tên đầy đủ</th>
-                    <th>Email</th>
-                    <th>Số điện thoại </th>
-                    <th>Địa chỉ thanh toán</th>
-                    <th class="col-action"></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>PhamHoa2410</td>
-                    <td>Phạm Bích Hòa</td>
-                    <td>bichhoa2410_1111@gmail.com</td>
-                    <td>0936542030</td>
-                    <td>Khu đô thị Đại Thanh - Tả Thanh Oai - Thanh Trì - Hà Nội</td>
-                    <td>
-                        <ul class="table-action">
-                            <li><a href="#"><i class="fas fa-trash"></i></a> </li>
-                            <li><a href="#"><i class="far fa-edit"></i></a> </li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
 </div>
@@ -125,7 +99,6 @@
     <div class="copy-right">
         <p>Designed by HTNLQ.</p>
     </div>
-</div>
 </body>
 <script src="js/dropDownHeader.js"></script>
 </html>

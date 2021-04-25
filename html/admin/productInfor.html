@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thêm mới sản phẩm</title>
+    <title>Chi tiết sản phẩm</title>
     <link rel="stylesheet" type="text/css" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,8 +31,7 @@
             <div class="drop-down">
                 <a href="#" onclick="dropDownHeader()" class="dropAdminBtn"></a>
                 <div id="dropAdmin" class="dropdownContent">
-                    <li><a href="#">Log Out</a></li>
-                    <li><a href="addNewUser.html">Tạo mới người dùng</a></li>
+                    <a href="#">Log Out</a>
                 </div>
             </div>
         </div>
@@ -71,11 +70,11 @@
                     <div class="product-left col-sm-5">
                         <section>
                             <p>Tên sản phẩm</p>
-                            <input type="text" name="product-name" required>
+                            <input type="text" name="product-name" value="Tên sách">
                         </section>
                         <section>
                             <p>Category</p>
-                            <select name="product-category" required>
+                            <select name="product-category">
                                 <option>Trinh thám</option>
                                 <option>Kinh Dị</option>
                                 <option>Văn học nước ngoài</option>
@@ -85,35 +84,35 @@
                         </section>
                         <section>
                             <p>Tác giả</p>
-                            <input type="text" name="product-author" required>
+                            <input type="text" name="product-author" value="Tên tác giả">
                         </section>
                         <section>
                             <p>Năm phát hành</p>
-                            <input type="number" name="product-year" required>
+                            <input type="number" name="product-year" value="2010">
                         </section>
                         <section>
                             <p>Nhà xuất bản</p>
-                            <input type="text" name="product-publisher" required>
+                            <input type="text" name="product-publisher" value="NXB ABC">
                         </section>
                     </div>
                     <div class="product-right col-sm-5">
                         <section>
                             <p>SKU</p>
-                            <input type="text" name="product-sku" required>
+                            <input type="text" name="product-sku" value="TH-110">
                         </section>
                         <section>
                             <p>Hình ảnh</p>
-                            <input type="file" name="product-image" required>
+                            <input type="file" name="product-image">
                         </section>
                         <section>
                             <p>Số lượng</p>
-                            <input type="number" name="product-qty" required>
+                            <input type="number" name="product-qty">
                         </section>
 
                         <section class="price">
                             <div class="price-content">
                                 <p>Giá thành</p>
-                                <input type="number" name="product-price" required>
+                                <input type="number" name="product-price" value="100.000">
                             </div>
                             <div  class="btnSpecialPrice">
                                 <a href="#" onclick="openSpecialPrice()"> Special Price</a></div>
@@ -146,14 +145,14 @@
         </div>
     </div>
 </div>
-    <div class="copyright">
-        <div class="copy-left">
-            <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
-        </div>
-        <div class="copy-right">
-            <p>Designed by HTNLQ.</p>
-        </div>
+<div class="copyright">
+    <div class="copy-left">
+        <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
     </div>
+    <div class="copy-right">
+        <p>Designed by HTNLQ.</p>
+    </div>
+</div>
 </body>
 <script src="js/dropDownHeader.js"></script>
 </html>

@@ -14,7 +14,7 @@
 <div class="top-header">
     <ul class="left-header col-sm-9">
         <li><img src="../imgs/Vector.png"></li>
-        <li><a href="">Trang chủ</a></li>
+        <li><a href="../homepage.html">Trang chủ</a></li>
     </ul>
     <div class="right-header col-sm-1">
         <div class="infor">
@@ -31,7 +31,8 @@
             <div class="drop-down">
                 <a href="#" onclick="dropDownHeader()" class="dropAdminBtn"></a>
                 <div id="dropAdmin" class="dropdownContent">
-                    <a href="#">Log Out</a>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="addNewUser.html">Tạo mới người dùng</a></li>
                 </div>
             </div>
         </div>
@@ -41,6 +42,7 @@
     <div class="side-menu">
         <div class="nav-items">
             <ul>
+                <li><a href="Dashboard.html">Trang chủ</a></li>
                 <li><a href="manageCategory.html">Danh Mục</a></li>
                 <li><a href="manageProduct.html">Sản Phẩm</a> </li>
                 <li><a href="manageCustomer.html">Khách hàng</a> </li>
@@ -90,8 +92,8 @@
                         <p>trong 1 trang</p>
                     </div>
                     <div class="pagination-button">
-                        <button><</button>
-                        <button>></button>
+                        <button><img src="../imgs/icon/black/back.svg"></button>
+                        <button><img src="../imgs/icon/black/next.svg"></button>
                     </div>
 
                 </div>
@@ -105,14 +107,14 @@
                     <th>Số lượng</th>
                     <th>Giá thành</th>
                     <th>Trạng thái</th>
-                    <th></th>
+                    <th class="col-action"></th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>
                         <img src="../imgs/1.jpg">
                     </td>
-                    <td>Tên sách</td>
+                    <td><a href="productInfor.html">Tên sách</a> </td>
                     <td>TH-01-12</td>
                     <td>Số lượng</td>
                     <td>Giá thành</td>

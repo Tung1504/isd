@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết đơn hàng</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<div class="top-header">
+    <ul class="left-header col-sm-9">
+        <li><img src="../imgs/Vector.png"></li>
+        <li><a href="../homepage.html">Trang chủ</a></li>
+    </ul>
+    <div class="right-header col-sm-1">
+        <div class="infor">
+            <div class="infor-icon">
+                <i class="fas fa-bell"></i>
+                <span class="infor-note"></span>
+                <div class="information-box">
+                    <p class="no-product">Không có thông tin</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-icon">
+            <img src="../imgs/avatar1.jpg" class="avatar">
+            <div class="drop-down">
+                <a href="#" onclick="dropDownHeader()" class="dropAdminBtn"></a>
+                <div id="dropAdmin" class="dropdownContent">
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-addmin">
+    <div class="side-menu">
+        <div class="nav-items">
+            <ul>
+                <li><a href="Dashboard.html">Trang chủ</a></li>
+                <li><a href="manageCategory.html">Danh Mục</a></li>
+                <li><a href="manageProduct.html">Sản Phẩm</a> </li>
+                <li><a href="manageCustomer.html">Khách hàng</a> </li>
+                <li><a href="manageCheckout.html">Đơn hàng</a> </li>
+                <li><a href="">Widget</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="control">
+            <div class="control-content"  id="control-bar">
+                <button><a href="manageCheckout.html.html">Quay Lại</a> </button>
+                <button>Giữ đơn hàng</button>
+                <button class="add-product" type="submit">Mua lại</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header-content">
+                <h5>Chi tiết đơn hàng</h5>
+            </div>
+            <hr>
+            <div class="manage-product">
+
+                <div class="order-infor">
+                <div class="header-content">
+                    <h6>Thông tin đơn hàng</h6>
+                </div>
+                <hr>
+                <div class=" displayFlex">
+                    <div class="product-left col-sm-5">
+                        <p>Chi tiết hóa đơn</p>
+                        <table>
+                            <tbody><tr>
+                                <th>Ngày đặt đơn</th>
+                                <td>Aug 6, 2020, 11:07:10 AM</td>
+                            </tr>
+                            <tr>
+                                <th>Tình trạng đơn hàng</th>
+                                <td><span id="order_status">Đang xử lý</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="product-right col-sm-5">
+                        <p> Thông tin khách hàng</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Tên khách hàng</th>
+                                <td>Phạm Hòa</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td><span>ABC@gmail.com</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+                <div class="order-infor">
+                    <div class="header-content">
+                        <h6 >Thông tin địa chỉ</h6>
+                    </div>
+                    <hr>
+                    <div class=" displayFlex">
+                        <div class="product-left col-sm-5">
+                            <p style="margin-bottom: 30px">Địa chỉ giao hàng</p>
+                            <ul>
+                                <li>Địa chỉ : <span>Khu đô thị Đại Thanh</span></li>
+                                <li>Quận/Huyện: <span>Tả Thanh Oai - Thanh Trì</span></li>
+                                <li>Thành phố: <span>Hà Nội</span></li>
+                                <li>Tỉnh: <span></span></li>
+                                <li>Số điện thoại: <span>0396542036</span></li>
+                            </ul>
+                        </div>
+                        <div class="product-right col-sm-5">
+                            <p style="margin-bottom: 30px">Địa chỉ thanh toán</p>
+                            <ul>
+                                <li>Địa chỉ : <span>Khu đô thị Đại Thanh</span></li>
+                                <li>Quận/Huyện: <span>Tả Thanh Oai - Thanh Trì</span></li>
+                                <li>Thành phố: <span>Hà Nội</span></li>
+                                <li>Tỉnh: <span></span></li>
+                                <li>Số điện thoại: <span>0396542036</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-infor">
+                    <div class="header-content">
+                        <h6>Phương thức vận chuyển</h6>
+                    </div>
+                    <hr>
+                    <div class=" displayFlex">
+                        <div class="product-left col-sm-5">
+                            <h6 style="margin-bottom: 30px">Thông tin thanh toán</h6>
+                            <p>Thanh toán khi nhận hàng</p>
+                            <p>Đơn hàng được thanh toán bằng tiền Việt Nam đồng.</p>
+                        </div>
+                        <div class="product-right col-sm-5">
+                            <h6 style="margin-bottom: 30px">Chi phí ship</h6>
+                            <p>Giao hàng tiết kiệm - 23.000 VND</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-product">
+                    <div class="header-content">
+                        <h6>Số lượng sản phẩm</h6>
+                    </div>
+                    <hr>
+                    <table>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá thành</th>
+                    </tr>
+                    <tr>
+                        <td>Sách này có tên là như thế này</td>
+                        <td>100</td>
+                        <td>1.000.000</td>
+                    </tr>
+                    </table>
+                </div>
+
+                <div class="order-infor">
+                    <div class="header-content">
+                        <h6>Tổng hóa đơn</h6>
+                    </div>
+                    <hr>
+                    <div class=" displayFlex">
+                        <div class="product-left col-sm-5">
+                           <h6 style="margin-bottom: 30px">Tình trạng đơn hàng</h6>
+                            <select>
+                                <option>Nhận đơn</option>
+                                <option>Đang xử lý</option>
+                                <option>Đang giao hàng</option>
+                                <option>Hoàn thành</option>
+                            </select>
+                        </div>
+                        <div class="product-right col-sm-5">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>Giá sản phẩm</th>
+                                    <td>Phạm Hòa</td>
+                                </tr>
+                                <tr>
+                                    <th>Phí ship</th>
+                                    <td><span>ABC@gmail.com</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Thuế</th>
+                                    <td><span>ABC@gmail.com</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Tổng tiền</th>
+                                    <td><span>ABC@gmail.com</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="copy-left">
+        <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
+    </div>
+    <div class="copy-right">
+        <p>Designed by HTNLQ.</p>
+    </div>
+</div>
+</body>
+<script src="js/dropDownHeader.js"></script>
+</html>
