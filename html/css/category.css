@@ -209,11 +209,11 @@ h4{
     color: var(--black);
     content: ">";
 }
-.breadcrum ul li:first-child a {
-    color: var(--black);
+.breadcrum ul li:last-child a {
+    color: var(--primary_color);
 }
 .breadcrum ul li a {
-    color: var(--primary_color);
+    color: var(--black);
     text-decoration: none;
     font-weight: 500;
 }
