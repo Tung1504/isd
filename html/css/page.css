@@ -2,12 +2,14 @@
 :root {
     --primary_color: #80A751;
     --secondary_color:#9DB97B;
+    --normal-color: #4D781A;
     --blue_1: #58A5FF;
     --gray_1: #AAAAAA;
     --gray_2: #828282;
     --gray_3: #F5F5F5;
     --gray_4: #DDDDDD;
     --gray_5: #989898;
+    --gray_6: #DCDCDC;
     --black: #000000;
     --black_2: #363636;
     --white_1: #FFFFFF;

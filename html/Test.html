@@ -1,130 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Image Slider</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image {
+            max-width: 300px;
+            margin: 25px;
+        }
+
+        .image img {
+            max-width: 100%;
+        }
+
+        .loupe {
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-shadow: 5px 5px 12px black;
+            background: rgba(0, 0, 0, 0.25);
+            cursor: crosshair;
+            overflow: hidden;
+        }
+
+        .loupe img {
+            position: absolute;
+            right: 0;
+        }
+
+    </style>
 </head>
 <body>
-<img src="imgs/2.jpg" class="card-img-top" alt="...">
-<div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-outline">Add to cart</a>
-</div>
 
-<div class="control">
-    <div class="control-content">
-        <button><a href="manageCategory.html">Quay Lại</a> </button>
-        <button>Lưu và tạo mới</button>
-        <button>Chỉnh sửa sản phẩm</button>
-        <button>Xóa</button>
-        <button class="add-product" type="submit">Lưu</button>
+<div class="container">
+    <div class="image">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/614RBksGdwL._AC_SX425_.jpg">
+    </div>
+    <div class="image">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81-7WGe7ZYL._SX679_.jpg">
+    </div>
+    <div class="image">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/818hsm3b8-L._AC_SX569_.jpg">
     </div>
 </div>
+<div class="loupe"></div>
 
-<div class="main-content">
-    <div class="header-content">
-        <h1>Quản lý danh mục</h1>
-    </div>
-    <hr>
-    <div class="control-form">
-        <form class="search-form">
-            <input type="text" value="" placeholder="Tìm kiếm danh mục">
-            <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-        </form>
-    </div>
-    <div class="total-product">
-        <h3>100<span> Danh mục</span> </h3>
-        <div class="pagination">
-            <div class="select-number-per-page">
-                <select>
-                    <option>20</option>
-                    <option>30</option>
-                    <option>50</option>
-                    <option>100</option>
-                    <option>200</option>
-                </select>
-                <p>trong 1 trang</p>
-            </div>
-            <div class="pagination-button">
-                <button><</button>
-                <button>></button>
-            </div>
+<script type="text/javascript">
+    var $loupe = $(".loupe"),
+        loupeWidth = $loupe.width(),
+        loupeHeight = $loupe.height();
 
-        </div>
-    </div>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Tên danh mục</th>
-            <th>Label</th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a> </li>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a> </li>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a> </li>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a> </li>
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a>
-            </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Trinh thám</td>
-            <td>TH</td>
-            <td>
-                <li><a href="#">Xóa</a> </li>
-                <li><a href="#">Chỉnh sửa</a>
-            </td>
-        </tr>
-    </table>
-</div>
+    $(document).on("mouseenter", ".image", function (e) {
+        var $currImage = $(this),
+            $img = $('<img/>')
+                .attr('src', $('img', this).attr("src"))
+                .css({ 'width': $currImage.width() * 2, 'height': $currImage.height() * 2 });
 
-<div class="copyright">
-    <div class="copy-left">
-        <p>BookWorm © 2021. All Rights Reserved. Click here for privacy policy.</p>
-    </div>
-    <div class="copy-right">
-        <p>Designed by HTNLQ.</p>
-    </div>
-</div>
+        $loupe.html($img).fadeIn(100);
 
+        $(document).on("mousemove",moveHandler);
+
+        function moveHandler(e) {
+            var imageOffset = $currImage.offset(),
+                fx = imageOffset.left - loupeWidth / 2,
+                fy = imageOffset.top - loupeHeight / 2,
+                fh = imageOffset.top + $currImage.height() + loupeHeight / 2,
+                fw = imageOffset.left + $currImage.width() + loupeWidth / 2;
+
+            $loupe.css({
+                'left': e.pageX - 75,
+                'top': e.pageY - 75
+            });
+
+            var loupeOffset = $loupe.offset(),
+                lx = loupeOffset.left,
+                ly = loupeOffset.top,
+                lw = lx + loupeWidth,
+                lh = ly + loupeHeight,
+                bigy = (ly - loupeHeight / 4 - fy) * 2,
+                bigx = (lx - loupeWidth / 4 - fx) * 2;
+
+            $img.css({ 'left': -bigx, 'top': -bigy });
+
+            if (lx < fx || lh > fh || ly < fy || lw > fw) {
+                $img.remove();
+                $(document).off("mousemove",moveHandler);
+                $loupe.fadeOut(100);
+            }
+        }
+    });
+
+</script>
 </body>
 </html>

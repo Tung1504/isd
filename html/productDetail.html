@@ -7,15 +7,19 @@
     <script type="text/javascript" src="js/1.js"></script>
     <link rel="stylesheet" type="text/css" href="css/page.css">
     <link rel="stylesheet" type="text/css" href="css/category.css">
+    <link rel="stylesheet" type="text/css" href="css/product-detail.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="admin/css/skeletabs.css">
     <!--Ranger Price-->
     <link href="../node_modules/nouislider/distribute/nouislider.css" rel="stylesheet">
     <script src="../node_modules/nouislider/distribute/nouislider.js"></script>
 
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
 </head>
 <body>
 <div class="header">
@@ -147,9 +151,407 @@
                 <li><a href="#">Sản Phẩm</a></li>
             </ul>
         </div>
+        <div class="prodcut-content">
+            <div class="product-image col-sm-4">
+                <div class="thumbnail">
+                    <div class="thumbnails-content">
+                        <div class="img-thumbnails"> <img src="imgs/carousel1.jpg" onclick="clickSlide(0)"></div>
+                        <div class="img-thumbnails"> <img src="imgs/1.jpg" onclick="clickSlide(1)"></div>
+                        <div class="img-thumbnails"> <img src="imgs/2.jpg" onclick="clickSlide(2)"></div>
+                        <div class="img-thumbnails"> <img src="imgs/3.jpg" onclick="clickSlide(3)"></div>
+                    </div>
+                </div>
+                <div class="img-content">
+                    <div class="mySlide"><img src="imgs/carousel1.jpg"></div>
+                    <div class="mySlide"><img src="imgs/1.jpg"></div>
+                    <div class="mySlide"><img src="imgs/2.jpg"></div>
+                    <div class="mySlide"><img src="imgs/3.jpg"></div>
+                </div>
+            </div>
+
+            <div class="loupe"></div>
+
+            <div class="product-infor">
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Id voluptatum, possimus optio modi dolore incidunt</h4>
+                <div class="product-review">
+                    <div class="review"><p>Đánh giá: <span>8.7</span></p> </div>
+                    <div class="number"><p><span>3.2K </span>Lượt đánh giá</p></div>
+                    <div class="sold-number"><p><span>5K </span>Lượt mua</p></div>
+                </div>
+                <div class="product-price">
+                    <h4 class="product-special-price">300.000 VND</h4>
+                    <h4 class="old-price"><del>300.000 VND</del></h4>
+                </div>
+                <div class="product-qty">
+                    <p>Số lượng</p>
+                        <div class="wrap-num-product">
+                            <div class="btn-num-product-down">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                            <input class="mtext-104" type="number" name="num-product1" value="1" min="1" >
+                            <div class="btn-num-product-up">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="product-action">
+                    <button><p>Thêm vào giỏ hàng</p><div class="cart-icon"></div></button>
+                    <button><p>Mua Ngay</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-full-detail">
+            <div id="outer" class="skltbs-theme-light" data-skeletabs='{ "startIndex": 0 }'>
+                <ul class="skltbs-tab-group">
+                    <li class="skltbs-tab-item">
+                        <button class="skltbs-tab">Tổng quát sản phẩm</button>
+                    </li>
+                    <li class="skltbs-tab-item">
+                        <button class="skltbs-tab">Thông tin chi tiết</button>
+                    </li>
+                    <li class="skltbs-tab-item">
+                        <button class="skltbs-tab">Đánh giá sản phẩm</button>
+                    </li>
+                </ul>
+                <div class="skltbs-panel-group">
+                    <div class="skltbs-panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur vel mauris tempor, fermentum velit in, consequat ex. In dui leo,
+                            dignissim at mi id, egestas pretium libero.
+                            Morbi tempus dignissim nulla, non euismod nisi varius a.
+                            Ut mollis nulla at ligula posuere, et suscipit felis hendrerit.
+                            Donec ut pretium risus. Nunc lobortis lacinia lectus, id pretium enim tincidunt eu. Ut.
+                        </p>
+                    </div>
+                    <div class="skltbs-panel product-description">
+                        <h5>Thông số sản phẩm</h5>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Tác giả</th>
+                                <td>Phạm Hòa</td>
+                            </tr>
+                            <tr>
+                                <th>Nhà xuất bản</th>
+                                <td><span>ABC@gmail.com</span></td>
+                            </tr>
+                            <tr>
+                                <th>Ngày xuất bản</th>
+                                <td><span>ABC@gmail.com</span></td>
+                            </tr>
+                            <tr>
+                                <th>Số trang</th>
+                                <td><span>ABC@gmail.com</span></td>
+                            </tr>
+                            <tr>
+                                <th>Ngôn ngữ</th>
+                                <td><span>ABC@gmail.com</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="skltbs-panel">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recent-product">
+            <h4>Sản phẩm liên quan</h4>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carouse-control">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="product-inner">
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="#"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="product-inner">
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-photo">
+                                <div class="info-title">
+                                    <div class="product-name">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                    </div>
+                                    <div class="product-author">
+                                        <p>Tên tác giả</p>
+                                    </div>
+                                </div>
+                                <div class="pro-img">
+                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-title">
+                                    <div class="pro-info">
+                                        <div class="rating">
+                                            <span>Đánh giá: <span>8/10</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <p>Giá thành: <span>100.000</span> VND</p>
+                                    </div>
+                                    <div class="action-product">
+                                        <div class="add-cart">
+                                            <button>
+                                                <p>Thêm vào giỏ hàng</p>
+                                                <div class="cart-icon"></div>
+                                            </button>
+                                        </div>
+                                        <div class="add-wishlist"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 </body>
 <script src="js/dropDownHeader.js"></script>
 <script src="js/numberControl.js"></script>
+<script src="admin/js/skeletabs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<script src="js/slider.js"></script>
+<script src="js/glass.js"></script>
 </html>
