@@ -6,25 +6,49 @@ html, body {
 	;
 	color: #222;
 }
-
-.navbar {
-	background-color: #80A751 !important;
+.first-section{
+	display: flex;
+	flex-direction: row;
+	height: 440px;
+	margin-bottom: 30px;
 }
-.navbar li a {
-    color: white !important;
+.img-product {
+	width: 167px;
+	height: 253px;
+	margin: 20px auto auto;
+	position: relative;
 }
-.navbar li a:hover {
-    color: black !important;
+.img-product img{
+	width: 100%;
+	height: 100%;
 }
-.carousel-inner img {
+.img-product .tag-label{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: var(--primary_color);
+	color: var(--white_1);
+	border-radius: 15px 0px 0px;
+}
+.img-product .tag-label p{
+	margin: 0;
+	padding: 5px 10px;
+}
+.banner{
+	margin-right: 30px;
+}
+.first-section .carousel-inner img {
 	width: 100%;
 }
 .hero-banner {
 	width: 100%;
-	height:500px;
+	height: 440px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/carousel1.jpg");
 }
 
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+	height: 440px;
+}
 .carousel-caption {
 	position: absolute;
 	top: 20%;
@@ -67,52 +91,115 @@ html, body {
 	font-size: 36px;
 }
 .header-text {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 }
 .header-content {
 	width: 100%;
 	margin: 30px 0px;
 }
-.header-text h1{
+.header-text h4{
 	width: max-content;
 	position: relative;
-	padding: 0px 30px
-}
-.header-text h1::before, .header-text h1::after {
-	content:'';
-	background-color: #222222;
-	width: 450px;
-	height: 2px;
-	position: absolute;
-	top: 25px
-}
-.header-text h1::before {
-	left: 100%;
-}
-.header-text h1::after {
-	right: 100%;
+	padding: 0px 30px;
+	font-weight: 600;
 }
 .jumbotron-content{
 	justify-content: space-around;
 	flex-direction: row;
 	display: flex;
-	text-align: center;}
-@media (max-width: 992px){
-	.carousel-caption {
-		top: 20%;
+	text-align: center;
+}
+.product{
+	margin-bottom: 30px;
+}
+.card {
+	position: relative;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+.hover-control{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--primary_color);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+.hover-control .control{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+.card-body{
+	text-align: center;
+}
+.product:hover .hover-control{
+	opacity: 1;
+	transition: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+.btn-control{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+}
+.btn-control .carousel-control-prev{
+	margin-right: 30px;
+}
+.btn-control .carousel-control-next, .btn-control .carousel-control-prev{
+	position: unset;
+	border: 1px solid var(--black);
+	border-radius: 20px;
+	width: 10%;
+}
+.map{
+	display: flex;
+	flex-direction: row;
+}
+.mobile{
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.first-section {
+		display: block;
+		height: 100%;
+	}
+	.first-section .product{
+		display: none;
+	}
+	.first-section .banner{
+		margin-right: 0;
+	}
+	.header-text h4{
+		max-width: fit-content;
+	}
+	.map{
+		display: block;
+	}
+	.map iframe{
+		width: 100%;
+	}
+	.desktop{
+		display: none;
+	}
+	.mobile{
+		display: block;
 	}
 	.carousel-caption h1{
-		;
+		font-size: 20px;
 	}
-	.carousel-caption h3{		
-		;		
+	.carousel-caption h5{
+		font-size: 14px;
 	}
-	.carousel-caption .btn{		
-		;		
-	}
-	.header-text h1::before, .header-text h1::after {
-		width: 100%
+	.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+		height: 200px;
 	}
 }
 @media (max-width: 768px){	
