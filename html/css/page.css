@@ -530,7 +530,7 @@ input.mtext-104:focus{
 .checkout-contain .address-infor .shipping-address li{
     list-style: none;
 }
-.active{
+.active-checkout{
     border: 2px solid var(--primary_color);
 }
 .select-address{

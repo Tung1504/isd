@@ -47,7 +47,7 @@ html, body {
 }
 
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
-	height: 440px;
+	height: 100%;
 }
 .carousel-caption {
 	position: absolute;
@@ -198,7 +198,7 @@ html, body {
 	.carousel-caption h5{
 		font-size: 14px;
 	}
-	.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+	.banner .carousel-item-next, .banner .carousel-item-prev, .banner .carousel-item.active {
 		height: 200px;
 	}
 }
@@ -216,6 +216,9 @@ html, body {
 	.carousel-caption .btn{		
 		
 		padding: 8px 14px;
+	}
+	.header-content {
+		margin: 30px 0px 0px;
 	}
 }
 @media (max-width: 576px){
