@@ -176,13 +176,13 @@ input::-webkit-inner-spin-button {
 	/*height: 394px;*/
 	width: 100%;
 	background: var(--primary_color);
-    margin-top: 40px;
-    padding: 20px 0px;
+    margin-top: 30px;
+    padding: 20px 0px 0px;
 }
 .footer-info{
 	display: flex;
 	justify-content: space-between;
-	margin: 40px 0;
+    margin: 20px 0px;
 	color: var(--white_1);
 }
 .footer-info h3{
@@ -579,7 +579,6 @@ input.mtext-104:focus{
     width: 60%;
 }
 .btn-checkout{
-    width: 60%;
     float: right;
     height: 40px;
     line-height: 40px;
@@ -589,6 +588,7 @@ input.mtext-104:focus{
     border-radius: 5px;
 }
 .btn-checkout a{
+    padding: 10px 40px;
     text-decoration: none;
     color: var(--white_1);
     font-weight: 600;
