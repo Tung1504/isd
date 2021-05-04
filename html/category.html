@@ -34,7 +34,7 @@
                     <span class="count-number" > 1 </span>
                     <span class="text">Giỏ hàng</span>
                     <div class="minicart">
-                       <p>Có <span class="number">1</span> sản phẩm trong giỏ hàng</p>
+                        <p>Có <span class="number">1</span> sản phẩm trong giỏ hàng</p>
                         <p class="total-price-minicart">10.000.000 VND</p>
                         <div class="total-product-minicart">
                             <div class="product-items-minicart">
@@ -62,7 +62,6 @@
                                         <div class="action add-wishlist">
                                             <i class="fas fa-heart"></i>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -96,6 +95,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="checkout-page"><a href="shopping_cart%20.html">Thanh Toán</a></button>
                     </div>
                 </li>
                 <li class="user-avatar">
@@ -106,7 +106,13 @@
                     <div class="customer-links">
                         <ul class="links">
                             <li class="authorization-link">
-                              <h5> Phạm Hòa</h5>
+                                <a  href="#" onclick="userDropDown()" class="dropbtn">Phạm Hòa</a>
+                                <div id="userDrop" class="dropdownContent">
+                                    <a href="#">Đăng xuất</a>
+                                    <a href="#">Tài khoản của tôi</a>
+                                    <a href="#">Đơn hàng của tôi</a>
+                                    <a href="#">Thông báo</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -119,21 +125,15 @@
     <div class="container">
         <div class="second-header-content">
             <li>
-                <a href="#">Trang chủ</a>
+                <a href="homepage.html">Trang chủ</a>
             </li>
             <li class="drop-down">
                 <a  href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Link 1</a>
+                    <a href="category.html">Link 1</a>
                     <a href="#">Link 2</a>
                     <a href="#">Link 3</a>
                 </div>
-            </li>
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
             </li>
         </div>
     </div>

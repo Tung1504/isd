@@ -45,9 +45,8 @@ html, body {
 	height: 440px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/carousel1.jpg");
 }
-
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-	height: 100%;
+.banner .carousel-item-next,.banner .carousel-item-prev,.banner .carousel-item.active {
+	height: 430px;
 }
 .carousel-caption {
 	position: absolute;
