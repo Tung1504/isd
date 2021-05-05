@@ -49,29 +49,41 @@ body {
   margin-right: 60px;
   border: solid #c4c4c4;
 }
-
-.delete-btn {
-  display: inline-block;
-  cursor: pointer;
-  width: 18px;
-  height: 17px;
-  background: url("delete-icn.svg") no-repeat center;
-  margin-right: 20px;
+.cart-items{
+  padding: 15px;
 }
-
-.like-btn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  display: inline-block;
-  background: url('twitter-heart.png');
-  width: 60px;
-  height: 60px;
-  background-size: 2900%;
-  background-repeat: no-repeat;
-  cursor: pointer;
+.cart-img{
+  width: 126px;
+  height: 134px;
 }
-
+.cart-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-desc{
+  margin-bottom: 15px;
+}
+.cart-items .cart-action {
+ display: flex;
+}
+.cart-items .cart-action i{
+  width: 25px;
+  height: 25px;
+  color: var(--gray_5);
+}
+.cart-items .cart-action i:before{
+  line-height: 25px;
+}
+.cart-items .cart-action i:hover{
+  color: var(--white_1);
+}
+.cart-items .cart-action .delete,.cart-items .cart-action .add-wishlist{
+  display: flex;
+}
+.cart-items .special-price{
+  color: var(--primary_color);
+}
 .is-active {
   animation-name: animate;
   animation-duration: .8s;
@@ -79,7 +91,36 @@ body {
   animation-timing-function: steps(28);
   animation-fill-mode: forwards;
 }
-
+.summary form{
+  padding: 15px;
+}
+.summary form select{
+  height: 35px;
+  margin-bottom: 30px;
+}
+.summary .voucher-btn{
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--normal-color);
+  color: var(--normal-color);
+  font-weight: 600;
+  background-color: unset;
+}
+.summary .voucher-btn a{
+  color: var(--normal-color);
+  text-decoration: none;
+}
+.summary .voucher-btn:hover{
+  border: 1px solid var(--primary_color);
+  color: var(--white_1);
+  background-color: var(--primary_color);
+}
+.summary .voucher-btn:hover a{
+  color: var(--white_1);
+}
+.total-price-sumary{
+  padding: 15px;
+}
 @keyframes animate {
   0%   { background-position: left;  }
   50%  { background-position: right; }
