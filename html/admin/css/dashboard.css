@@ -1,0 +1,57 @@
+.dashboard-main {
+    height: 100%;
+    float: left;
+    width: 33.33333333%;
+    margin: 0 30px;
+}
+
+.dashboard-secondary{
+    height: 100%;
+    width: 58%;
+    float: right;
+    margin-right: 30px;
+}
+.dashboard-main > div{
+    margin-top: 50px;
+}
+.dashboard-main > div h5{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.dashboard-main > div table, .dashboard-secondary table{
+    width: 100%;
+}
+.dashboard-main > div table th,  .dashboard-secondary table th{
+    font-size: 14px;
+    font-weight: 600;
+}
+.dashboard-main > div table td, .dashboard-secondary table td{
+    font-size: 13px;
+}
+.dashboard-main > div table td, .dashboard-main > div table th, .dashboard-secondary table td, .dashboard-secondary table th{
+    text-align: left;
+    padding: 8px !important;
+    border-bottom: 1px solid #dddddd !important ;
+}
+.dashboard-main .total-price{
+    color: #5f9ea0;
+}
+.dashboard-secondary .skltbs-theme-light .skltbs-tab.skltbs-active {
+    color: #fff;
+    background: #5f9ea0;
+}
+.dashboard-secondary .skltbs-theme-light .skltbs-tab:focus{
+    webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dashboard-secondary ul.infor {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 50px;
+}
+.dashboard-secondary ul.infor li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

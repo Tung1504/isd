@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, innitial-scale=1">
 	<script type="text/javascript" src="js/1.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/page.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
@@ -18,20 +19,35 @@
                 <div class="logo-icon">
                     <img src="imgs/Vector.png">
                 </div>
-                <form class="search-form col-sm-7">
+                <form class="search-form col-sm-6">
                     <input type="text" value="" placeholder="Tìm kiếm đầu sách">
                     <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
                 </form>
-                <div class="signin-container col-sm-3">
-                    <li>
+                <div class="signin-container col-sm-4">
+                    <li class="shopping-cart">
                         <i class="fas fa-shopping-cart"></i>
+                        <span class="count-number" > 0 </span>
+                        <span class="text">Giỏ hàng</span>
+                        <div class="minicart">
+                            <p class="no-product">Không có sản phẩm trong giỏ hàng</p>
+                        </div>
                     </li>
-                    <li class="first-element">
-                        <a href="SignUp.html">Đăng Ký</a>
+                    <li class="user-avatar">
+                        <i class="far fa-user"></i>
                     </li>
-                    <li>
-                        <a href="SignIn.html"> Đăng Nhập</a>
-                    </li>
+                    <div class="customer-action">
+                        <div class="head-title">Xin chào,</div>
+                        <div class="customer-links">
+                            <ul class="links">
+                                <li class="authorization-link first-element">
+                                    <a href="SignUp.html">Đăng Ký</a>
+                                </li>
+                                <li class="authorization-link">
+                                    <a href="SignIn.html" style="margin-left: 5px"> Đăng Nhập</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -60,24 +76,5 @@
         </div>
     </div>
 </body>
-<script>
-    /* onclick dropdown */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+<script src="js/dropDownHeader.js"></script>
 </html>

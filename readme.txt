@@ -1,3 +1,5 @@
-- Quang Anh sửa lại hết mấy cái link về ảnh nhé.
-	Ông đang để là chĩa sang folder images mà t k thấy có. Nếu là trong img thì sửa nhé.
-Để ý cả mấy cái sau nữa.
+Cố gắng đẩy vào tối t6 nhé. Nếu muộn quá thì đẩy vào tối t7. Deadline đấy.
+
+
+
+Quang Anh nhớ đổi link dẫn ảnh nhé. Trong file là link dẫn đang sai đấy. Cho hết vào 1 folder tên imgs cho t nhé
