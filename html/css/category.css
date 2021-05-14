@@ -2,6 +2,13 @@
 body{
     background: var(--white_1);
 }
+.off {
+    display: none;
+}
+
+.on {
+    display: block;
+}
 .shop-content{
     margin: 40px 0;
 
@@ -228,38 +235,4 @@ h4{
     font-size: 12px;
     font-weight: 400;
     text-transform: capitalize;
-}
-/*price range*/
-.filter-section .noUi-horizontal {
-    height: 9px;
-}
-.filter-section .noUi-connect {
-    height: 9px;
-    width: 100%;
-}
-.filter-section .noUi-handle:before, .filter-section .noUi-handle:after{
-    display: none;
-}
-.filter-section .noUi-horizontal .noUi-handle {
-    width: 16px;
-    height: 16px;
-    right: -9px;
-    top: -5px;
-    border-radius: 50px;
-}
-.filter-section .noUi-horizontal .noUi-handle:focus{
-    outline: none;
-}
-.filter-section input {
-    margin-top: 40px;
-    width: 97px;
-    height: 37px;
-}
-.filter-section input:focus{
-    outline: none;
-}
-.filter-section .text-price-value {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
 }

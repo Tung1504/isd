@@ -16,6 +16,12 @@
 
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="js/categoryFilter.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").demano({debug_element_id: "filters_text"});
+        });
+    </script>
 </head>
 <body>
 <div class="header">
@@ -34,7 +40,7 @@
                     <span class="count-number" > 1 </span>
                     <span class="text">Giỏ hàng</span>
                     <div class="minicart">
-                       <p>Có <span class="number">1</span> sản phẩm trong giỏ hàng</p>
+                        <p>Có <span class="number">1</span> sản phẩm trong giỏ hàng</p>
                         <p class="total-price-minicart">10.000.000 VND</p>
                         <div class="total-product-minicart">
                             <div class="product-items-minicart">
@@ -62,7 +68,6 @@
                                         <div class="action add-wishlist">
                                             <i class="fas fa-heart"></i>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -96,6 +101,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="checkout-page"><a href="shopping_cart%20.html">Thanh Toán</a></button>
                     </div>
                 </li>
                 <li class="user-avatar">
@@ -106,7 +112,13 @@
                     <div class="customer-links">
                         <ul class="links">
                             <li class="authorization-link">
-                              <h5> Phạm Hòa</h5>
+                                <a  href="#" onclick="userDropDown()" class="dropbtn">Phạm Hòa</a>
+                                <div id="userDrop" class="dropdownContent">
+                                    <a href="#">Đăng xuất</a>
+                                    <a href="#">Tài khoản của tôi</a>
+                                    <a href="#">Đơn hàng của tôi</a>
+                                    <a href="#">Thông báo</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -119,23 +131,18 @@
     <div class="container">
         <div class="second-header-content">
             <li>
-                <a href="#">Trang chủ</a>
+                <a href="homepage.html">Trang chủ</a>
             </li>
             <li class="drop-down">
-                <a  href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                <a  href="#" onclick="categoryDropDown()" class="dropCategoryBtn">Danh mục sản phẩm</a>
+                <div id="categoryDrop" class="dropdown-content">
+                    <a href="category.html">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
                 </div>
-            </li>
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
-            </li>
         </div>
+        </li>
     </div>
 </div>
 <div class="col-sm-9 main-page">
@@ -143,7 +150,6 @@
         <main>
             <!-- SHOP*********************************************************** -->
             <div class="shop-content">
-                <div class="container">
                     <div class="breadcrum">
                         <ul>
                             <li><a href="homepage.html">Trang chủ</a></li>
@@ -154,36 +160,64 @@
                         <h5 class="heading-style">Danh sách sản phẩm <span>(Tổng có <span>100</span> sản phẩm)</span></h5>
                         <hr>
                     </div>
-                    <div class="shop-col">
-                        <div class="shop-left col-sm-3">
-                            <div class="filter-section">
-                                <h5 class="heading-style">Danh mục</h5>
-                                <ul class="category-list">
-                                    <li>Sách giáo khoa</li>
-                                    <li>Sách giáo khoa</li>
-                                    <li>Sách giáo khoa</li>
-                                    <li>Sách giáo khoa</li>
-                                    <li>Sách giáo khoa</li>
-
-                                </ul>
-                            </div>
-                            <div class="filter-section">
-                                <h5 class="heading-style">Khoảng giá</h5>
-                                <div class="text-price-value">
-                                    <p>0</p>
-                                    <p>10.000.000</p>
+                    <div class="shop-col" id="container">
+                        <div class="filters col-sm-3">
+                            <div class="shop-left">
+                                <div class="filter-section">
+                                    <h5 class="heading-style">Danh mục</h5>
+                                    <ul id="filterCategory" class="category-list">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input id="Group 1" class="filter" type="checkbox" name="Group 1" data-attribute="category" data-value="Group 1" data-group="category"/>
+                                                Sách giáo khoa
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="Group 2" class="filter" type="checkbox" name="Group 2" data-attribute="category" data-value="Group 2" data-group="category"/>
+                                                Sách giáo khoa
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="Group 3" class="filter" type="checkbox" name="Group 3" data-attribute="category" data-value="Group 3" data-group="category"/>
+                                                Sách giáo khoa
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="Group 4" class="filter" type="checkbox" name="Group 4" data-attribute="category" data-value="Group 4" data-group="category"/>
+                                                Sách giáo khoa
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="Group 5" class="filter" type="checkbox" name="Group 5" data-attribute="category" data-value="Group 5" data-group="category"/>
+                                                Sách giáo khoa
+                                            </label>
+                                        </div>
+                                    </ul>
                                 </div>
-
-                                <div class="mall-property">
-                                    <div class="mall-slider-handles"
-                                         data-start="0"
-                                         data-end="1000000"
-                                         data-min="0"
-                                         data-max="1000000" data-target="price" style="width: 100%">
-
-                                    </div>
-                                    <input data-min="price" name="price-min" value="0">
-                                    <input data-max="price" name="price-max" value="1000000" style="float: right;">
+                                <div id="filterPrice" class="filter-section">
+                                    <h5 class="heading-style">Khoảng giá</h5>
+                                    <ul class="category-list">
+                                        <div class="checkbox">
+                                            <label><input id="price1" class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price1"
+                                                          data-group="price"/>50.000-100.000</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="price2" class="filter" type="checkbox" name="price3" data-attribute="price" data-value="price2"
+                                                          data-group="price"/>100.000-200.000</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="price03" class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price3"
+                                                          data-group="price"/>200.000-300.000</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="price4" class="filter" type="checkbox" name="price4" data-attribute="price" data-value="price4"
+                                                          data-group="price"/>300.000-500.000</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input id="price5" class="filter" type="checkbox" name="price5" data-attribute="price" data-value="price5"
+                                                          data-group="price"/>500.000-1.000.000</label>
+                                        </div>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -205,72 +239,40 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="product-detail">
-                                <div class="product-photo">
-                                    <div class="info-title">
-                                        <div class="product-name">
-                                            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
-                                        </div>
-                                        <div class="product-author">
-                                           <p>Tên tác giả</p>
-                                        </div>
-                                    </div>
-                                    <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="info-title">
-                                        <div class="pro-info">
-                                            <div class="rating">
-                                               <span>Đánh giá: <span>8/10</span></span>
+                            <div class=" product-detail">
+                                <div data-category="Group 1" data-price="price1" class="product-photo filterable">
+                                        <div class="info-title">
+                                            <div class="product-name">
+                                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                            </div>
+                                            <div class="product-author">
+                                                <p>Tên tác giả</p>
                                             </div>
                                         </div>
-                                        <div class="price">
-                                            <p>Giá thành: <span>100.000</span> VND</p>
+                                        <div class="pro-img">
+                                            <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                         </div>
-                                        <div class="action-product">
-                                            <div class="add-cart">
-                                                <button>
-                                                    <p>Thêm vào giỏ hàng</p>
-                                                    <div class="cart-icon"></div>
-                                                </button>
+                                        <div class="info-title">
+                                            <div class="pro-info">
+                                                <div class="rating">
+                                                    <span>Đánh giá: <span>8/10</span></span>
+                                                </div>
                                             </div>
-                                            <div class="add-wishlist"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-photo">
-                                    <div class="info-title">
-                                        <div class="product-name">
-                                            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
-                                        </div>
-                                        <div class="product-author">
-                                            <p>Tên tác giả</p>
-                                        </div>
-                                    </div>
-                                    <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="info-title">
-                                        <div class="pro-info">
-                                            <div class="rating">
-                                                <span>Đánh giá: <span>8/10</span></span>
+                                            <div class="price">
+                                                <p>Giá thành: <span>100.000</span> VND</p>
+                                            </div>
+                                            <div class="action-product">
+                                                <div class="add-cart">
+                                                    <button>
+                                                        <p>Thêm vào giỏ hàng</p>
+                                                        <div class="cart-icon"></div>
+                                                    </button>
+                                                </div>
+                                                <div class="add-wishlist"></div>
                                             </div>
                                         </div>
-                                        <div class="price">
-                                            <p>Giá thành: <span>100.000</span> VND</p>
-                                        </div>
-                                        <div class="action-product">
-                                            <div class="add-cart">
-                                                <button>
-                                                    <p>Thêm vào giỏ hàng</p>
-                                                    <div class="cart-icon"></div>
-                                                </button>
-                                            </div>
-                                            <div class="add-wishlist"></div>
-                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-photo">
+                                <div data-category="Group 2" data-price="price2" class="product-photo filterable" class="product-photo filterable">
                                     <div class="info-title">
                                         <div class="product-name">
                                             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
@@ -280,7 +282,7 @@
                                         </div>
                                     </div>
                                     <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                        <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                     </div>
                                     <div class="info-title">
                                         <div class="pro-info">
@@ -302,7 +304,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-photo">
+                                <div class="product-photo filterable">
                                     <div class="info-title">
                                         <div class="product-name">
                                             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
@@ -312,7 +314,7 @@
                                         </div>
                                     </div>
                                     <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                        <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                     </div>
                                     <div class="info-title">
                                         <div class="pro-info">
@@ -334,7 +336,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-photo">
+                                <div class="product-photo filterable">
                                     <div class="info-title">
                                         <div class="product-name">
                                             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
@@ -344,7 +346,7 @@
                                         </div>
                                     </div>
                                     <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                        <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                     </div>
                                     <div class="info-title">
                                         <div class="pro-info">
@@ -366,7 +368,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-photo">
+                                <div class="product-photo filterable">
                                     <div class="info-title">
                                         <div class="product-name">
                                             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
@@ -376,7 +378,39 @@
                                         </div>
                                     </div>
                                     <div class="pro-img">
-                                        <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                        <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info-title">
+                                        <div class="pro-info">
+                                            <div class="rating">
+                                                <span>Đánh giá: <span>8/10</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <p>Giá thành: <span>100.000</span> VND</p>
+                                        </div>
+                                        <div class="action-product">
+                                            <div class="add-cart">
+                                                <button>
+                                                    <p>Thêm vào giỏ hàng</p>
+                                                    <div class="cart-icon"></div>
+                                                </button>
+                                            </div>
+                                            <div class="add-wishlist"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-photo filterable">
+                                    <div class="info-title">
+                                        <div class="product-name">
+                                            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                                        </div>
+                                        <div class="product-author">
+                                            <p>Tên tác giả</p>
+                                        </div>
+                                    </div>
+                                    <div class="pro-img">
+                                        <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                     </div>
                                     <div class="info-title">
                                         <div class="pro-info">
@@ -400,8 +434,8 @@
                                 </div>
                             </div>
                         </div>
+                        <div style="clear: both"></div>
                     </div>
-                </div>
             </div>
             <div class="page-no">
                 <div class="container">
@@ -423,24 +457,6 @@
 </body>
 <script src="js/dropDownHeader.js"></script>
 <script src="js/numberControl.js"></script>
-<script>
-    $(function () {
-        let $propertiesForm = $('.mall-category-filter');
-        $('.mall-slider-handles').each(function () {
-            let el = this;
-            noUiSlider.create(el, {
-                start: [el.dataset.start, el.dataset.end],
-                connect: true,
-                range: {
-                    min: [parseFloat(el.dataset.min)],
-                    max: [parseFloat(el.dataset.max)]
-                },
-            }).on('change', function (values) {
-                $('[data-min="' + el.dataset.target + '"]').val(values[0])
-                $('[data-max="' + el.dataset.target + '"]').val(values[1])
-                $propertiesForm.trigger('submit');
-            });
-        })
-    })
-</script>
+<script src="js/categoryFilter.js"></script>
+
 </html>

@@ -20,6 +20,8 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
     <meta name="robots" content="noindex,follow" />
+    <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
@@ -37,10 +39,71 @@
                 <div class="signin-container col-sm-4">
                     <li class="shopping-cart">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="count-number"> 0 </span>
+                        <span class="count-number" > 1 </span>
                         <span class="text">Giỏ hàng</span>
                         <div class="minicart">
-                            <p class="no-product">Không có sản phẩm trong giỏ hàng</p>
+                            <p>Có <span class="number">1</span> sản phẩm trong giỏ hàng</p>
+                            <p class="total-price-minicart">10.000.000 VND</p>
+                            <div class="total-product-minicart">
+                                <div class="product-items-minicart">
+                                    <div class="product-image-minicart">
+                                        <img src="imgs/1.jpg">
+                                    </div>
+                                    <div class="product-infor-minicart">
+                                        <p class="product-name-minicart">Tên sản phẩm có thể có 2 dòng đến ntn</p>
+                                        <p class="product-author-minicart">Tên tác giả</p>
+                                        <p class="product-price-minicart">10.000.000 <span>VND</span></p>
+                                        <p>Số lượng:</p>
+                                        <div class="product-action-minicart">
+                                            <div class="wrap-num-product">
+                                                <div class="btn-num-product-down">
+                                                    <i class="fas fa-minus"></i>
+                                                </div>
+                                                <input class="mtext-104" type="number" name="num-product1" value="1" min="1" >
+                                                <div class="btn-num-product-up">
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="action delete">
+                                                <i class="fas fa-trash"></i>
+                                            </div>
+                                            <div class="action add-wishlist">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-items-minicart">
+                                    <div class="product-image-minicart">
+                                        <img src="imgs/2.jpg">
+                                    </div>
+                                    <div class="product-infor-minicart">
+                                        <p class="product-name-minicart">Tên sản phẩm có thể có 2 dòng đến ntn</p>
+                                        <p class="product-author-minicart">Tên tác giả</p>
+                                        <p class="product-price-minicart">10.000.000 <span>VND</span></p>
+                                        <p>Số lượng:</p>
+                                        <div class="product-action-minicart">
+                                            <div class="wrap-num-product">
+                                                <div class="btn-num-product-down">
+                                                    <i class="fas fa-minus"></i>
+                                                </div>
+                                                <input class="mtext-104" type="number" name="num-product1" value="1" min="1" >
+                                                <div class="btn-num-product-up">
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="action delete">
+                                                <i class="fas fa-trash"></i>
+                                            </div>
+                                            <div class="action add-wishlist">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="checkout-page"><a href="shopping_cart%20.html">Thanh Toán</a></button>
                         </div>
                     </li>
                     <li class="user-avatar">
@@ -50,11 +113,14 @@
                         <div class="head-title">Xin chào,</div>
                         <div class="customer-links">
                             <ul class="links">
-                                <li class="authorization-link first-element">
-                                    <a href="SignUp.html">Đăng Ký</a>
-                                </li>
                                 <li class="authorization-link">
-                                    <a href="SignIn.html" style="margin-left: 5px"> Đăng Nhập</a>
+                                    <a  href="#" onclick="userDropDown()" class="dropbtn">Phạm Hòa</a>
+                                    <div id="userDrop" class="dropdownContent">
+                                        <a href="#">Đăng xuất</a>
+                                        <a href="#">Tài khoản của tôi</a>
+                                        <a href="#">Đơn hàng của tôi</a>
+                                        <a href="#">Thông báo</a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -67,23 +133,18 @@
         <div class="container">
             <div class="second-header-content">
                 <li>
-                    <a href="#">Trang chủ</a>
+                    <a href="homepage.html">Trang chủ</a>
                 </li>
                 <li class="drop-down">
-                    <a href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                    <a  href="#" onclick="categoryDropDown()" class="dropCategoryBtn">Danh mục sản phẩm</a>
+                    <div id="categoryDrop" class="dropdown-content">
+                        <a href="category.html">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
                     </div>
-                </li>
-                <li>
-                    <a href="#">Contact Us</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
             </div>
+            </li>
         </div>
     </div>
 
@@ -92,124 +153,86 @@
         <div class=" justify-content-center row">
             <h4><strong>Giỏ hàng</strong></h4>
             <div class="col-md-8">
-                <div class="p-3">
-
-                    <div style="margin: 20px;" class="d-flex  justify-content-between  p-  bg-white  rounded">
-                        <div class=""><img class="rounded" src="./imgs/1.jpg" width="70"></div>
+                <div class="cart-container">
+                    <div style="margin: 20px;" class="cart-items d-flex  justify-content-between  p-  bg-white  rounded">
+                        <div class="cart-img"><img class="rounded" src="./imgs/1.jpg" width="70"></div>
                         <div class=" align-items-left "><span class="font-weight-bold">SQL AND
                                 PYTHON PROGRAMMING</span>
                             <div class="d-flex  product-desc">
                                 <div class="size "><span class="text-grey">Tác giả:</span><span
                                         class="font-weight-bold">&nbsp;M</span>
                                 </div>
-                                <div class="color"><span class="text-grey">Color:</span><span
-                                        class="font-weight-bold">&nbsp;Grey</span>
+                                <div class="color">
                                 </div>
                             </div>
-                            <div>
-                                <button>Thêm vào Wishlist</button>
-                                <button>Thêm vào giỏ hàng</button>
+                            <div class="cart-action">
+                                <div class="delete">
+                                    <i class="action fas fa-trash"></i>
+                                </div>
+                                <div class="add-wishlist">
+                                    <i class="action fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex  align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <button>+</button>
-                            <h5 class="text-grey mt-1  ml-1">2</h5><i class="fa fa-plus text-success"></i>
-                            <button>-</button>
+                        <div class="d-flex  align-items-center qty">
+                            <div class="product-action-minicart">
+                                <div class="wrap-num-product">
+                                    <div class="btn-num-product-down">
+                                        <i class="fas fa-minus"></i>
+                                    </div>
+                                    <input class="mtext-104" type="number" name="num-product1" value="1" min="1" >
+                                    <div class="btn-num-product-up">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <h5 class="text-grey">50.000 VND</h5>
+                            <h5 class="special-price">50.000 VND</h5>
+                            <p class="regular-price"><del>50.000 VND</del></p>
                         </div>
-
                     </div>
-                    <div style="margin: 20px;" class="d-flex  justify-content-between  p-  bg-white  rounded">
-                        <div class=""><img class="rounded" src="./imgs/1.jpg" width="70"></div>
+                    <div style="margin: 20px;" class="cart-items d-flex  justify-content-between  p-  bg-white  rounded">
+                        <div class="cart-img"><img class="rounded" src="./imgs/1.jpg" width="70"></div>
                         <div class=" align-items-left "><span class="font-weight-bold">SQL AND
                                 PYTHON PROGRAMMING</span>
                             <div class="d-flex  product-desc">
                                 <div class="size "><span class="text-grey">Tác giả:</span><span
                                         class="font-weight-bold">&nbsp;M</span>
                                 </div>
-                                <div class="color"><span class="text-grey">Color:</span><span
-                                        class="font-weight-bold">&nbsp;Grey</span>
+                                <div class="color">
                                 </div>
                             </div>
-                            <div>
-                                <button>Thêm vào Wishlist</button>
-                                <button>Thêm vào giỏ hàng</button>
+                            <div class="cart-action">
+                                <div class="delete">
+                                    <i class="action fas fa-trash"></i>
+                                </div>
+                                <div class="add-wishlist">
+                                    <i class="action fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex  align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <button>+</button>
-                            <h5 class="text-grey mt-1  ml-1">2</h5><i class="fa fa-plus text-success"></i>
-                            <button>-</button>
+                        <div class="d-flex  align-items-center qty">
+                            <div class="product-action-minicart">
+                                <div class="wrap-num-product">
+                                    <div class="btn-num-product-down">
+                                        <i class="fas fa-minus"></i>
+                                    </div>
+                                    <input class="mtext-104" type="number" name="num-product1" value="1" min="1" >
+                                    <div class="btn-num-product-up">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <h5 class="text-grey">50.000 VND</h5>
                         </div>
-
                     </div>
-                    <div style="margin: 20px;" class="d-flex  justify-content-between  p-  bg-white  rounded">
-                        <div class=""><img class="rounded" src="./imgs/1.jpg" width="70"></div>
-                        <div class=" align-items-left "><span class="font-weight-bold">SQL AND
-                                PYTHON PROGRAMMING</span>
-                            <div class="d-flex  product-desc">
-                                <div class="size "><span class="text-grey">Tác giả:</span><span
-                                        class="font-weight-bold">&nbsp;M</span>
-                                </div>
-                                <div class="color"><span class="text-grey">Color:</span><span
-                                        class="font-weight-bold">&nbsp;Grey</span>
-                                </div>
-                            </div>
-                            <div>
-                                <button>Thêm vào Wishlist</button>
-                                <button>Thêm vào giỏ hàng</button>
-                            </div>
-                        </div>
-                        <div class="d-flex  align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <button>+</button>
-                            <h5 class="text-grey mt-1  ml-1">2</h5><i class="fa fa-plus text-success"></i>
-                            <button>-</button>
-                        </div>
-                        <div>
-                            <h5 class="text-grey">50.000 VND</h5>
-                        </div>
-
-                    </div>
-                    <div style="margin: 20px;" class="d-flex  justify-content-between  p-  bg-white  rounded">
-                        <div class=""><img class="rounded" src="./imgs/1.jpg" width="70"></div>
-                        <div class=" align-items-left "><span class="font-weight-bold">SQL AND
-                                PYTHON PROGRAMMING</span>
-                            <div class="d-flex  product-desc">
-                                <div class="size "><span class="text-grey">Tác giả:</span><span
-                                        class="font-weight-bold">&nbsp;M</span>
-                                </div>
-                                <div class="color"><span class="text-grey">Color:</span><span
-                                        class="font-weight-bold">&nbsp;Grey</span>
-                                </div>
-                            </div>
-                            <div>
-                                <button>Thêm vào Wishlist</button>
-                                <button>Thêm vào giỏ hàng</button>
-                            </div>
-                        </div>
-                        <div class="d-flex  align-items-center qty"><i class="fa fa-minus text-danger"></i>
-                            <button>+</button>
-                            <h5 class="text-grey mt-1  ml-1">2</h5><i class="fa fa-plus text-success"></i>
-                            <button>-</button>
-                        </div>
-                        <div>
-                            <h5 class="text-grey">50.000 VND</h5>
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
             <div class="col-md-4 summary">
                 <div style="background-color: white;">
-
-
-
                     <form>
                         <p>Voucher khuyến mãi</p>
                         <div>
@@ -220,11 +243,10 @@
                             </select>
                         </div>
 
-                        <button class="container-fluid"> Áp dụng Voucher</button>
+                        <button class="container-fluid voucher-btn"> Áp dụng Voucher</button>
                     </form>
                 </div>
-                <div style="background-color: white;">
-
+                <div class="total-price-sumary" style="background-color: white;">
                     <hr>
                     <div>
                         <div class="col" style="padding-left:0;">Tạm tính</div>
@@ -239,9 +261,7 @@
                             <h2> 132.00</h2>
                         </div>
                     </div>
-                    <button class="container-fluid"> Tiến hành đặt hàng</button>
-
-
+                    <button class="container-fluid voucher-btn"><a href="checkout.html">Tiến hành đặt hàng</a> </button>
                 </div>
             </div>
 
@@ -343,5 +363,5 @@
 
     <!-- Footer -->
 </body>
-
+<script src="js/numberControl.js"></script>
 </html>
