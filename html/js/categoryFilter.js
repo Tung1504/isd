@@ -34,7 +34,7 @@
         $(element).find("#" + element.settings.debug_element_id).html(JSON.stringify(filter_definitions));
     }
 
-    $.fn.filter = function(config) {
+    $.fn.filterSection = function(config) {
         let defaults = {
             filter_class: "filter",
             filterable_class: "filterable",
@@ -52,4 +52,3 @@
         return this;
     };
 }(jQuery));
-
