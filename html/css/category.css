@@ -49,6 +49,7 @@ h4{
 .shop-right .sort-section{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .product-detail {
     display: flex;
@@ -60,7 +61,6 @@ h4{
     border: 1px solid var(--primary_color);
     border-radius: 5px;
     margin-bottom: 30px;
-    /*background-color: var(--white_1);*/
     box-shadow: 1px 1px 4px rgba(0,0,0,.3);
 }
 .product-name h6 {

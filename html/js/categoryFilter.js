@@ -34,8 +34,8 @@
         $(element).find("#" + element.settings.debug_element_id).html(JSON.stringify(filter_definitions));
     }
 
-    $.fn.demano = function(config) {
-        var defaults = {
+    $.fn.filter = function(config) {
+        let defaults = {
             filter_class: "filter",
             filterable_class: "filterable",
             attribute_name: "attribute",
