@@ -224,4 +224,14 @@ input:focus {
   .buttons {
     margin-right: 20px;
   }
+  #summary{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    font-size: 10px;
+  }
+
 }
