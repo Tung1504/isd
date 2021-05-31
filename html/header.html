@@ -15,14 +15,14 @@
 <body>
     <div class="header">
         <div class="container">
-            <nav class="top-header">
-                <div class="logo-icon">
+            <nav class="top-header" id="myTopnav">
+                <a href="homepage.html" class="logo-icon active">
                     <img src="imgs/Vector.png">
-                </div>
-                <form class="search-form col-sm-6">
+                </a>
+                <div class="search-form col-sm-6">
                     <input type="text" value="" placeholder="Tìm kiếm đầu sách">
                     <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-                </form>
+                </div>
                 <div class="signin-container col-sm-4">
                     <li class="shopping-cart">
                         <i class="fas fa-shopping-cart"></i>
@@ -49,17 +49,18 @@
                         </div>
                     </div>
                 </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </nav>
         </div>
     </div>
     <div class="second-header">
         <div class="container">
             <div class="second-header-content">
-                <li>
-                    <a href="#">Trang chủ</a>
-                </li>
+                <li><a href="#">Trang chủ</a></li>
                 <li class="drop-down">
-                    <a  href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
+                    <a href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
                         <div id="myDropdown" class="dropdown-content">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>

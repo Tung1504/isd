@@ -15,25 +15,26 @@
     <script src="../node_modules/nouislider/distribute/nouislider.js"></script>
 
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+
     <script src="js/categoryFilter.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#container").demano({debug_element_id: "filters_text"});
+            $("#container").filterSection({debug_element_id: "filters_text"});
         });
     </script>
 </head>
 <body>
 <div class="header">
     <div class="container">
-        <nav class="top-header">
-            <div class="logo-icon">
-                <img src="imgs/Vector.png">
-            </div>
-            <form class="search-form col-sm-6">
+        <nav class="top-header" id="myTopnav">
+            <a href="homepage.html" class="logo-icon active"><img src="imgs/Vector.png"></a>
+            <div class="search-form col-sm-6">
                 <input type="text" value="" placeholder="Tìm kiếm đầu sách">
                 <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-            </form>
+            </div>
             <div class="signin-container col-sm-4">
                 <li class="shopping-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -115,7 +116,7 @@
                                 <a  href="#" onclick="userDropDown()" class="dropbtn">Phạm Hòa</a>
                                 <div id="userDrop" class="dropdownContent">
                                     <a href="#">Đăng xuất</a>
-                                    <a href="#">Tài khoản của tôi</a>
+                                    <a href="user-profile.html">Tài khoản của tôi</a>
                                     <a href="#">Đơn hàng của tôi</a>
                                     <a href="#">Thông báo</a>
                                 </div>
@@ -124,6 +125,9 @@
                     </div>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
         </nav>
     </div>
 </div>
@@ -141,8 +145,33 @@
                     <a href="#">Trinh Thám</a>
                     <a href="#">Trinh Thám</a>
                 </div>
+            </li>
+            <a href="javascript:void(0);" class="icon" onclick="openSideBar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        </li>
+        <div id="sideBarMenu" class="sidebar">
+            <div class="light-box">
+                <button class="close">
+                    <a onclick="close()" href=""><i class="fas fa-times"></i>
+                    </a>
+                </button>
+                <a href="homepage.html" class="logo-icon"><img src="imgs/Vector.png"></a>
+                <div class="mobile-category">
+                    <p>Danh mục sản phẩm</p>
+                    <ul>
+                        <li> <a href="category.html">Trinh Thám</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-infor">
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="#">Đơn hàng của tôi</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                </div>
+
+                <button class="action-signIn"><a href="">Đăng xuất</a> </button>
+            </div>
+        </div>
     </div>
 </div>
 <div class="col-sm-9 main-page">
@@ -161,74 +190,80 @@
                         <hr>
                     </div>
                     <div class="shop-col" id="container">
-                        <div class="filters col-sm-3">
-                            <div class="shop-left">
-                                <div class="filter-section">
-                                    <h5 class="heading-style">Danh mục</h5>
-                                    <ul id="filterCategory" class="category-list">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input id="Group 1" class="filter" type="checkbox" name="Group 1" data-attribute="category" data-value="Group 1" data-group="category"/>
-                                                Sách giáo khoa
-                                            </label>
+                        <div  id="filterContainer" class="filterBox">
+                            <div class="light-box">
+                                <button class="close">
+                                    <a href="javascript:void(0)" onclick="closeFilter()"><i class="fas fa-times"></i>
+                                    </a>
+                                </button>
+                                <div class="filters">
+                                    <div class="shop-left">
+                                        <div class="filter-section">
+                                            <h5 class="heading-style">Danh mục</h5>
+                                            <ul class="category-list">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input class="filter" type="checkbox" name="Group 1" data-attribute="category" data-value="Group 1" data-group="category"/>
+                                                        Sách giáo khoa
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="Group 2" data-attribute="category" data-value="Group 2" data-group="category"/>
+                                                        Sách giáo khoa
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="Group 3" data-attribute="category" data-value="Group 3" data-group="category"/>
+                                                        Sách giáo khoa
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="Group 4" data-attribute="category" data-value="Group 4" data-group="category"/>
+                                                        Sách giáo khoa
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="Group 5" data-attribute="category" data-value="Group 5" data-group="category"/>
+                                                        Sách giáo khoa
+                                                    </label>
+                                                </div>
+                                            </ul>
                                         </div>
-                                        <div class="checkbox">
-                                            <label><input id="Group 2" class="filter" type="checkbox" name="Group 2" data-attribute="category" data-value="Group 2" data-group="category"/>
-                                                Sách giáo khoa
-                                            </label>
+                                        <div class="filter-section">
+                                            <h5 class="heading-style">Khoảng giá</h5>
+                                            <ul class="category-list">
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price1"
+                                                                  data-group="price"/>50.000-100.000</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="price3" data-attribute="price" data-value="price2"
+                                                                  data-group="price"/>100.000-200.000</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price3"
+                                                                  data-group="price"/>200.000-300.000</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="price4" data-attribute="price" data-value="price4"
+                                                                  data-group="price"/>300.000-500.000</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input class="filter" type="checkbox" name="price5" data-attribute="price" data-value="price5"
+                                                                  data-group="price"/>500.000-1.000.000</label>
+                                                </div>
+                                            </ul>
                                         </div>
-                                        <div class="checkbox">
-                                            <label><input id="Group 3" class="filter" type="checkbox" name="Group 3" data-attribute="category" data-value="Group 3" data-group="category"/>
-                                                Sách giáo khoa
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="Group 4" class="filter" type="checkbox" name="Group 4" data-attribute="category" data-value="Group 4" data-group="category"/>
-                                                Sách giáo khoa
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="Group 5" class="filter" type="checkbox" name="Group 5" data-attribute="category" data-value="Group 5" data-group="category"/>
-                                                Sách giáo khoa
-                                            </label>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div id="filterPrice" class="filter-section">
-                                    <h5 class="heading-style">Khoảng giá</h5>
-                                    <ul class="category-list">
-                                        <div class="checkbox">
-                                            <label><input id="price1" class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price1"
-                                                          data-group="price"/>50.000-100.000</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="price2" class="filter" type="checkbox" name="price3" data-attribute="price" data-value="price2"
-                                                          data-group="price"/>100.000-200.000</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="price03" class="filter" type="checkbox" name="price1" data-attribute="price" data-value="price3"
-                                                          data-group="price"/>200.000-300.000</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="price4" class="filter" type="checkbox" name="price4" data-attribute="price" data-value="price4"
-                                                          data-group="price"/>300.000-500.000</label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input id="price5" class="filter" type="checkbox" name="price5" data-attribute="price" data-value="price5"
-                                                          data-group="price"/>500.000-1.000.000</label>
-                                        </div>
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <a href="javascript:void(0);" class="icon" onclick="openFilter()">
+                            <i class="fa fa-bars"></i>
+                        </a>
                         <div class="shop-right col-sm-9">
                             <div class="sort-section">
                                 <div class="filter-tag">
-                                    <div class="filter-tag-item">
-                                        <p>Sách giáo khoa</p>
-                                        <div class="delete-button"></div>
-                                    </div>
-
                                 </div>
                                 <div class="sort-selection">
                                     <select>
@@ -272,7 +307,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <div data-category="Group 2" data-price="price2" class="product-photo filterable" class="product-photo filterable">
+                                <div data-category="Group 2" data-price="price2" class="product-photo filterable">
                                     <div class="info-title">
                                         <div class="product-name">
                                             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
@@ -434,7 +469,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="clear: both"></div>
                     </div>
             </div>
             <div class="page-no">
@@ -457,6 +491,4 @@
 </body>
 <script src="js/dropDownHeader.js"></script>
 <script src="js/numberControl.js"></script>
-<script src="js/categoryFilter.js"></script>
-
 </html>

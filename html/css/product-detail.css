@@ -216,3 +216,127 @@
     position: absolute;
     right: 0;
 }
+.recent-product-mobile{
+    display: none;
+}
+.skltbs-panel section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.skltbs-panel section label{
+    margin-bottom: 10px;
+}
+.skltbs-panel section input{
+   height: 45px;
+}
+.skltbs-panel section textarea{
+    height: 100px;
+}
+.customer-infor {
+    display: flex;
+    margin-bottom: 15px;
+}
+.customer-infor .avatar{
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+.cusomter-name{
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+}
+
+.customer-infor .avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.comment-time{
+    float: right;
+    font-style: italic;
+    font-size: 10px;
+}
+.commnent{
+    background-color: var(--secondary_color);
+    color: var(--white_1);
+    border: none;
+    padding: 5px 10px;
+
+}
+.comment-btn{
+    background-color: var(--primary_color);
+    color: var(--white_1);
+    border: none;
+    padding: 10px 15px;
+}
+@media screen and (max-width: 1024px) {
+    .prodcut-content {
+        flex-direction: column;
+    }
+    .product-image {
+        width: 100%;
+        height: 100%;
+        margin-right: 30px;
+        display: flex;
+    }
+    .thumbnail {
+        width: 100%;
+        height: 300px;
+    }
+    .thumbnails-content {
+        flex-direction: column;
+        overflow: scroll;
+        width: 100%;
+        height: 300px;
+        flex-wrap: wrap;
+    }
+    .img-thumbnails {
+        height: 100%;
+        float: left;
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+    }
+    .img-content{
+        display: none;
+    }
+    .product-infor .product-review .review {
+         padding-right: 0;
+    }
+    .product-infor .product-review .number:after, .product-infor .product-review .number:before {
+        margin: 0px 6px;
+    }
+    .product-infor .product-review .sold-number {
+        padding-left: 6px;
+    }
+    .product-price {
+        flex-direction: column;
+    }
+    .product-infor .product-action button {
+        margin-top: 30px;
+        margin-right: 15px;
+    }
+    .breadcrum ul {
+        margin-bottom: 0;
+    }
+    .desktop{
+        display: none;
+    }
+    .recent-product-mobile{
+        display: block;
+        overflow: scroll;
+        width: 100%;
+        height: 497px;
+        margin-top: 30px;
+    }
+    .recent-product-mobile-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 492px;
+        overflow: scroll;
+    }
+}

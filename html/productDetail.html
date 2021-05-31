@@ -24,14 +24,12 @@
 <body>
 <div class="header">
     <div class="container">
-        <nav class="top-header">
-            <div class="logo-icon">
-                <img src="imgs/Vector.png">
-            </div>
-            <form class="search-form col-sm-6">
+        <nav class="top-header" id="myTopnav">
+            <a href="homepage.html" class="logo-icon active"><img src="imgs/Vector.png"></a>
+            <div class="search-form col-sm-6">
                 <input type="text" value="" placeholder="Tìm kiếm đầu sách">
                 <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-            </form>
+            </div>
             <div class="signin-container col-sm-4">
                 <li class="shopping-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -122,6 +120,9 @@
                     </div>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
         </nav>
     </div>
 </div>
@@ -139,8 +140,33 @@
                     <a href="#">Trinh Thám</a>
                     <a href="#">Trinh Thám</a>
                 </div>
+            </li>
+            <a href="javascript:void(0);" class="icon" onclick="openSideBar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        </li>
+        <div id="sideBarMenu" class="sidebar">
+            <div class="light-box">
+                <button class="close">
+                    <a onclick="close()" href=""><i class="fas fa-times"></i>
+                    </a>
+                </button>
+                <a href="homepage.html" class="logo-icon"><img src="imgs/Vector.png"></a>
+                <div class="mobile-category">
+                    <p>Danh mục sản phẩm</p>
+                    <ul>
+                        <li> <a href="category.html">Trinh Thám</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-infor">
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="#">Đơn hàng của tôi</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                </div>
+
+                <button class="action-signIn"><a href="">Đăng xuất</a> </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -255,14 +281,41 @@
                         </table>
                     </div>
                     <div class="skltbs-panel">
-
+                        <h5>Đánh giá sản phẩm</h5>
+                        <div class="comment-section">
+                            <div class="customer-infor">
+                                <div class="avatar">
+                                    <img src="imgs/1.jpg">
+                                </div>
+                                <p class="customer-name">Phạm Hoà</p>
+                            </div>
+                            <div class="customer-comment">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Curabitur vel mauris tempor, fermentum velit in, consequat ex. In dui leo,
+                                dignissim at mi id, egestas pretium libero.
+                                Morbi tempus dignissim nulla, non euismod nisi varius a.
+                                Ut mollis nulla at ligula posuere, et suscipit felis hendrerit.
+                            </div>
+                            <div class="comment-time">9:00 am - 15/05/2021</div>
+<!--                            <button class="commnent">Reply</button>-->
+                        </div>
+                        <hr>
+                        <section>
+                            <label>Tên người dùng</label>
+                            <input type="text"  name="user-name" placeholder="Tên">
+                        </section>
+                        <section>
+                            <label>Comment</label>
+                            <textarea type="text"  name="user-comment" placeholder="Comment"></textarea>
+                        </section>
+                        <button class="comment-btn">Comment</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="recent-product">
             <h4>Sản phẩm liên quan</h4>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide desktop" data-bs-ride="carousel">
                 <div class="carouse-control">
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
@@ -352,7 +405,7 @@
                                     </div>
                                 </div>
                                 <div class="pro-img">
-                                    <a href="productdetail.html"><img src="imgs/1.jpg" alt=""></a>
+                                    <a href="productDetail.html"><img src="imgs/1.jpg" alt=""></a>
                                 </div>
                                 <div class="info-title">
                                     <div class="pro-info">
@@ -538,6 +591,106 @@
                                         <div class="add-wishlist"></div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-product-mobile">
+                <div class="recent-product-mobile-container">
+                    <div class="product-photo">
+                        <div class="info-title">
+                            <div class="product-name">
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                            </div>
+                            <div class="product-author">
+                                <p>Tên tác giả</p>
+                            </div>
+                        </div>
+                        <div class="pro-img">
+                            <a href="#"><img src="imgs/1.jpg" alt=""></a>
+                        </div>
+                        <div class="info-title">
+                            <div class="pro-info">
+                                <div class="rating">
+                                    <span>Đánh giá: <span>8/10</span></span>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <p>Giá thành: <span>100.000</span> VND</p>
+                            </div>
+                            <div class="action-product">
+                                <div class="add-cart">
+                                    <button>
+                                        <p>Thêm vào giỏ hàng</p>
+                                        <div class="cart-icon"></div>
+                                    </button>
+                                </div>
+                                <div class="add-wishlist"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-photo">
+                        <div class="info-title">
+                            <div class="product-name">
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                            </div>
+                            <div class="product-author">
+                                <p>Tên tác giả</p>
+                            </div>
+                        </div>
+                        <div class="pro-img">
+                            <a href="#"><img src="imgs/1.jpg" alt=""></a>
+                        </div>
+                        <div class="info-title">
+                            <div class="pro-info">
+                                <div class="rating">
+                                    <span>Đánh giá: <span>8/10</span></span>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <p>Giá thành: <span>100.000</span> VND</p>
+                            </div>
+                            <div class="action-product">
+                                <div class="add-cart">
+                                    <button>
+                                        <p>Thêm vào giỏ hàng</p>
+                                        <div class="cart-icon"></div>
+                                    </button>
+                                </div>
+                                <div class="add-wishlist"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-photo">
+                        <div class="info-title">
+                            <div class="product-name">
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis.</h6>
+                            </div>
+                            <div class="product-author">
+                                <p>Tên tác giả</p>
+                            </div>
+                        </div>
+                        <div class="pro-img">
+                            <a href="#"><img src="imgs/1.jpg" alt=""></a>
+                        </div>
+                        <div class="info-title">
+                            <div class="pro-info">
+                                <div class="rating">
+                                    <span>Đánh giá: <span>8/10</span></span>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <p>Giá thành: <span>100.000</span> VND</p>
+                            </div>
+                            <div class="action-product">
+                                <div class="add-cart">
+                                    <button>
+                                        <p>Thêm vào giỏ hàng</p>
+                                        <div class="cart-icon"></div>
+                                    </button>
+                                </div>
+                                <div class="add-wishlist"></div>
                             </div>
                         </div>
                     </div>

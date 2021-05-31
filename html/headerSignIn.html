@@ -19,14 +19,12 @@
 <body>
 <div class="header">
     <div class="container">
-        <nav class="top-header">
-            <div class="logo-icon">
-                <img src="imgs/Vector.png">
-            </div>
-            <form class="search-form col-sm-6">
+        <nav class="top-header" id="myTopnav">
+            <a href="homepage.html" class="logo-icon active"><img src="imgs/Vector.png"></a>
+            <div class="search-form col-sm-6">
                 <input type="text" value="" placeholder="Tìm kiếm đầu sách">
                 <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-            </form>
+            </div>
             <div class="signin-container col-sm-4">
                 <li class="shopping-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -117,6 +115,9 @@
                     </div>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
         </nav>
     </div>
 </div>
@@ -128,17 +129,42 @@
             </li>
             <li class="drop-down">
                 <a  href="#" onclick="categoryDropDown()" class="dropCategoryBtn">Danh mục sản phẩm</a>
-                <div id="categoryDrop" class="dropdown-content">
-                    <a href="category.html">Trinh Thám</a>
-                    <a href="#">Trinh Thám</a>
-                    <a href="#">Trinh Thám</a>
-                    <a href="#">Trinh Thám</a>
-                </div>
-                </div>
+                    <div id="categoryDrop" class="dropdown-content">
+                        <a href="category.html">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
+                        <a href="#">Trinh Thám</a>
+                    </div>
             </li>
+            <a href="javascript:void(0);" class="icon" onclick="openSideBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="sideBarMenu" class="sidebar">
+            <div class="light-box">
+                <button class="close">
+                    <a onclick="close()" href=""><i class="fas fa-times"></i>
+                    </a>
+                </button>
+                <a href="homepage.html" class="logo-icon"><img src="imgs/Vector.png"></a>
+                <div class="mobile-category">
+                    <p>Danh mục sản phẩm</p>
+                    <ul>
+                        <li> <a href="category.html">Trinh Thám</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-infor">
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="#">Đơn hàng của tôi</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                </div>
+
+                <button class="action-signIn"><a href="">Đăng xuất</a> </button>
+            </div>
+        </div>
         </div>
     </div>
-</div>
+
 </body>
 <script src="js/dropDownHeader.js"></script>
 <script src="js/numberControl.js"></script>
