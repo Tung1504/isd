@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/Downloads/filter-checkbox-demano/.idea/filter-checkbox-demano.iml" filepath="$USER_HOME$/Downloads/filter-checkbox-demano/.idea/filter-checkbox-demano.iml" />
+      <module fileurl="file://D:/html/.idea/html.iml" filepath="D:/html/.idea/html.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/isd.iml" filepath="$PROJECT_DIR$/.idea/isd.iml" />
     </modules>
   </component>

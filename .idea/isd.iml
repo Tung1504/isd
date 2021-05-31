@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="filter-checkbox-demano" />
+    <orderEntry type="module" module-name="html" />
   </component>
 </module>
