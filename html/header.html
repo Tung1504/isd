@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Header</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, innitial-scale=1">
-	<script type="text/javascript" src="js/1.js"></script>
+    <title>Header</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, innitial-scale=1">
+    <script type="text/javascript" src="js/1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/category.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/page.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Ranger Price-->
+    <link href="../node_modules/nouislider/distribute/nouislider.css" rel="stylesheet">
+    <script src="../node_modules/nouislider/distribute/nouislider.js"></script>
     <script src="https://kit.fontawesome.com/850f11ab6f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <nav class="top-header" id="myTopnav">
-                <a href="homepage.html" class="logo-icon active">
-                    <img src="imgs/Vector.png">
-                </a>
-                <div class="search-form col-sm-6">
-                    <input type="text" value="" placeholder="Tìm kiếm đầu sách">
-                    <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
-                </div>
-                <div class="signin-container col-sm-4">
-                    <li class="shopping-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="count-number" > 0 </span>
-                        <span class="text">Giỏ hàng</span>
-                        <div class="minicart">
-                            <p class="no-product">Không có sản phẩm trong giỏ hàng</p>
-                        </div>
-                    </li>
-                    <li class="user-avatar">
-                        <i class="far fa-user"></i>
-                    </li>
-                    <div class="customer-action">
-                        <div class="head-title">Xin chào,</div>
-                        <div class="customer-links">
-                            <ul class="links">
-                                <li class="authorization-link first-element">
-                                    <a href="SignUp.html">Đăng Ký</a>
-                                </li>
-                                <li class="authorization-link">
-                                    <a href="SignIn.html" style="margin-left: 5px"> Đăng Nhập</a>
-                                </li>
-                            </ul>
-                        </div>
+<div class="header">
+    <div class="container">
+        <nav class="top-header" id="myTopnav">
+            <a href="homepage.html" class="logo-icon active"><img src="imgs/Vector.png"></a>
+            <div class="search-form col-sm-6">
+                <input type="text" value="" placeholder="Tìm kiếm đầu sách">
+                <button type="submit" class="sb-icon-search"><i class="fas fa-search fa-sm"></i></button>
+            </div>
+            <div class="signin-container col-sm-4">
+                <li class="shopping-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="count-number" > 1 </span>
+                    <span class="text">Giỏ hàng</span>
+                    <div class="minicart">
+                      <p>Không có sản phẩm nào tồn tại trong giỏ hàng</p>
+                    </div>
+                </li>
+                <li class="user-avatar">
+                    <i class="far fa-user"></i>
+                </li>
+                <div class="customer-action">
+                    <div class="head-title">Xin chào,</div>
+                    <div class="customer-links">
+                        <ul class="links">
+                            <li class="authorization-link first-element">
+                                <a href="SignUp.html">Đăng Ký</a>
+                            </li>
+                            <li class="authorization-link">
+                                <a href="SignIn.html" style="margin-left: 5px"> Đăng Nhập</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </nav>
-        </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+        </nav>
     </div>
-    <div class="second-header">
-        <div class="container">
-            <div class="second-header-content">
-                <li><a href="#">Trang chủ</a></li>
-                <li class="drop-down">
-                    <a href="#" onclick="myFunction()" class="dropbtn">Danh mục sản phẩm</a>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                </li>
-                <li>
-                    <a href="#">Contact Us</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
+</div>
+<div class="second-header">
+    <div class="container">
+        <div class="second-header-content">
+            <li>
+                <a href="homepage.html">Trang chủ</a>
+            </li>
+            <li class="drop-down">
+                <a  href="#" onclick="categoryDropDown()" class="dropCategoryBtn">Danh mục sản phẩm</a>
+                <div id="categoryDrop" class="dropdown-content">
+                    <a href="category.html">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
+                    <a href="#">Trinh Thám</a>
+                </div>
+            </li>
+            <a href="javascript:void(0);" class="icon" onclick="openSideBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="sideBarMenu" class="sidebar">
+            <div class="light-box">
+                <button class="close">
+                    <a onclick="close()" href=""><i class="fas fa-times"></i>
+                    </a>
+                </button>
+                <a href="homepage.html" class="logo-icon"><img src="imgs/Vector.png"></a>
+                <div class="mobile-category">
+                    <p>Danh mục sản phẩm</p>
+                    <ul>
+                        <li> <a href="category.html">Trinh Thám</a></li>
+                    </ul>
+                </div>
+                <button class="action-signIn"><a href="">Đăng Nhập</a></button>
+                <p class="text-mobile">Chưa có tài khoản</p>
+               <a href="" class="sing-up-text">Đăng ký</a>
+
             </div>
         </div>
     </div>
+</div>
+
 </body>
 <script src="js/dropDownHeader.js"></script>
+<script src="js/numberControl.js"></script>
+<script>
+
+</script>
 </html>

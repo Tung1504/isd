@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
     color: var(--white_1);
 }
 .top-header .signin-container li a {
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: none;
     color: var(--white_1);
 }
@@ -743,6 +743,17 @@ input.mtext-104:focus{
     }
     .second-header-content a{
         color: var(--black_2);
+    }
+    .text-mobile{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .sing-up-text{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        color: var(--primary_color);
     }
 }
 .top-header .icon {
